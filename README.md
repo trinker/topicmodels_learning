@@ -218,8 +218,7 @@ References
 ----------
 
 -   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
-    Models. R package version 1.2.3,
-    <http://CRAN.R-project.org/package=lda>.
+    Models. <http://CRAN.R-project.org/package=lda>.
 
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
@@ -231,10 +230,13 @@ References
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 
--   Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for
-    Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf)
-    *Proceedings of the Workshop on Interactive Language Learning,
-    Visualization, and Interfaces* 63-70.
+-   Sievert, C. & Shirley, K. E.. (2014a). [LDAvis: A Method for
+    Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings
+    of the Workshop on Interactive Language Learning, Visualization, and
+    Interfaces* 63-70.
+
+-   Sievert, C. & Shirley, K. E.. (2014b). [Vignette: LDAvis
+    dtails.](/articles/Sievert2014b.pdf) 1-5.
 
 Example Uses
 ------------
