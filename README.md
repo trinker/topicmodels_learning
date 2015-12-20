@@ -143,6 +143,11 @@ Articles
     *Proceedings of the Workshop on Interactive Language Learning,
     Visualization, and Interfaces* 63-70.
 
+-   Taddy, M.A. (2012). [On Estimation and Selection for Topic
+    Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th
+    International Conference on Artificial Intelligence and Statistics
+    (AISTATS 2012)*, 1184-1193.
+
 Websites & Blogs
 ================
 
@@ -157,6 +162,9 @@ Websites & Blogs
 
 -   Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
     Tour](http://www.scottbot.net/HIAL/?p=19113)
+
+-   Jones, T. (n.d.) [Topic Models Reading
+    List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
 
 R Resources
 ===========
@@ -197,6 +205,12 @@ Package Comparisons
 <td align="left">Interactive visualization</td>
 <td align="left">Aids in model interpretation</td>
 <td align="left">Sievert &amp; Shirley</td>
+</tr>
+<tr class="odd">
+<td align="left">mallet</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 </tbody>
 </table>

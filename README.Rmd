@@ -72,6 +72,8 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
 
+- Taddy, M.A. (2012). [On Estimation and Selection for Topic Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th International Conference on Artificial Intelligence and Statistics (AISTATS 2012)*, 1184-1193.
+
 # Websites & Blogs
 
 - Blei, D. (n.d.). [David Blei on Topic Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
@@ -81,6 +83,8 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 - Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 
 - Weingart, S. (2012). [Topic Modeling for Humanists: A Guided Tour](http://www.scottbot.net/HIAL/?p=19113)
+
+- Jones, T. (n.d.) [Topic Models Reading List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
 
 # R Resources
 
@@ -92,6 +96,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 | topicmodels   | LDA and CTM  | Follows Blei's implementation; great vignette; takes [DTM](https://en.wikipedia.org/wiki/Document-term_matrix) |  Gr&uuml;en & Hornik |
 | stm           | Model w/ meta-data | Great documentation; nice visualization  |  Roberts, Stewart, & Tingley |
 | LDAvis        | Interactive visualization     | Aids in model interpretation  |  Sievert & Shirley  |
+| mallet        |                               |                        |               |  
 
 ## References
 
