@@ -39,7 +39,9 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 ## Visualization
 
-- statgraphics (2014) [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
+- Sievert, C. (2014) [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
+
+- Maybe, B. (2015) [SavvySharpa: Visualizing Topic Models](https://www.youtube.com/watch?v=tGxW2BzC_DU)
 
 # Articles
 
@@ -74,7 +76,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
 
-- Schmidt, B.M. (20) [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
+- Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 
 - Weingart, S. (2012). [Topic Modeling for Humanists: A Guided Tour](http://www.scottbot.net/HIAL/?p=19113)
 
@@ -98,6 +100,10 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 - Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 
 - Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
+
+## Example Uses
+
+- Sievert, C. (n.d.) [A topic model for movie reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
 
 
 

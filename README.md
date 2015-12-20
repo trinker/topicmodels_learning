@@ -26,6 +26,7 @@ Table of Contents
 -   [R Resources](#r-resources)
     -   [Package Comparisons](#package-comparisons)
     -   [References](#references)
+    -   [Example Uses](#example-uses)
 -   [Topic Modeling R Demo](#topic-modeling-r-demo)
     -   [Install/Load Tools & Data](#installload-tools--data)
     -   [Generate Stopwords](#generate-stopwords)
@@ -73,9 +74,12 @@ Theory
 Visualization
 -------------
 
--   statgraphics (2014) [LDAvis: A method for visualizing and
+-   Sievert, C. (2014) [LDAvis: A method for visualizing and
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
+
+-   Maybe, B. (2015) [SavvySharpa: Visualizing Topic
+    Models](https://www.youtube.com/watch?v=tGxW2BzC_DU)
 
 Articles
 ========
@@ -145,7 +149,7 @@ Websites & Blogs
 -   Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling
     Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
 
--   Schmidt, B.M. (20) [Words Alone: Dismantling Topic Models in the
+-   Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the
     Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 
 -   Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
@@ -212,6 +216,12 @@ References
     Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf)
     *Proceedings of the Workshop on Interactive Language Learning,
     Visualization, and Interfaces* 63-70.
+
+Example Uses
+------------
+
+-   Sievert, C. (n.d.) [A topic model for movie
+    reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
 
 Topic Modeling R Demo
 =====================
