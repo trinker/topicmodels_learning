@@ -31,12 +31,6 @@ Table of Contents
     -   [Example Modeling](#example-modeling)
 -   [Topic Modeling R Demo](#topic-modeling-r-demo)
     -   [topicmodels Package](#topicmodels-package)
-        -   [Install/Load Tools & Data](#installload-tools--data)
-        -   [Generate Stopwords](#generate-stopwords)
-        -   [Create the DocumentTermMatrix](#create-the-documenttermmatrix)
-        -   [Run the Model](#run-the-model)
-        -   [Plot the Topics Per Person & Time](#plot-the-topics-per-person--time)
-        -   [LDAvis of Model](#ldavis-of-model)
 -   [Contributing](#contributing)
 
 Key Players
@@ -313,9 +307,6 @@ The .R script for this demonstration can be downloaded from
 ### Install/Load Tools & Data
 
     if (!require("pacman")) install.packages("pacman")
-
-    ## Loading required package: pacman
-
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 

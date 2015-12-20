@@ -3,7 +3,8 @@ title: "Topic Models Learning and R Resources"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   md_document:
-    toc: true  
+    toc: true 
+    toc_depth: 2    
 ---
 ```{r, echo=FALSE, message=FALSE}
 # rmarkdown::render("README.Rmd", "all"); md_toc()
