@@ -93,7 +93,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic Models. R package version 1.2.3, URL http://CRAN.R-project.org/package=lda.
 
-- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Grun2011.pdf), 40(13), 1-30. 
+- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
 
 - Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 
