@@ -6,6 +6,7 @@ output:
     toc: true  
 ---
 ```{r, echo=FALSE, message=FALSE}
+# rmarkdown::render("README.Rmd", "all"); md_toc()
 library(knitr)
 knit_hooks$set(htmlcap = function(before, options, envir) {
   if(!before) {
@@ -157,3 +158,9 @@ lda_model %>%
     LDAvis::serVis("C:/Users/Tyler/Desktop/LDAvis/example")
 ```
 
+# Contributing
+
+You are welcome to:
+* submit suggestions and bug-reports at: <https://github.com/trinker/topicmodels_learning/issues>
+* send a pull request on: <https://github.com/trinker/topicmodels_learning/>
+* compose a friendly e-mail to: <tyler.rinker@gmail.com>

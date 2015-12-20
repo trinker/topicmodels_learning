@@ -1,21 +1,6 @@
--   Key Players
--   Videos
-    -   Introductory
-    -   Theory
-    -   Visualization
--   Articles
--   Websites & Blogs
--   R Resources
-    -   lda
-    -   topicmodels
-    -   stm
-    -   LDAvis
--   Topic Modeling R Demo
-    -   Install/Load Tools & Data
-    -   Generate Stopwords
-    -   Create the DocumentTermMatrix
-    -   Run the Model
-    -   LDAvis of Model
+topicmodels_learning
+============
+
 
 This is a collection documenting the resources I find related to topic
 models with an R flavored focus. A *topic model* is a type of
@@ -25,8 +10,33 @@ of documents. Typically topic modeling is used on a collection of text
 documents but can be used for other modes including use a caption
 generation for images.
 
+
+Table of Contents
+============
+
+-   [Key Players](#key-players)
+-   [Videos](#videos)
+    -   [Introductory](#introductory)
+    -   [Theory](#theory)
+    -   [Visualization](#visualization)
+-   [Articles](#articles)
+-   [Websites & Blogs](#websites--blogs)
+-   [R Resources](#r-resources)
+    -   [lda](#lda)
+    -   [topicmodels](#topicmodels)
+    -   [stm](#stm)
+    -   [LDAvis](#ldavis)
+-   [Topic Modeling R Demo](#topic-modeling-r-demo)
+    -   [Install/Load Tools & Data](#installload-tools--data)
+    -   [Generate Stopwords](#generate-stopwords)
+    -   [Create the DocumentTermMatrix](#create-the-documenttermmatrix)
+    -   [Run the Model](#run-the-model)
+    -   [LDAvis of Model](#ldavis-of-model)
+-   [Contributing](#contributing)
+
 Key Players
-===========
+============
+
 
 Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first
 introduced the notion of topic modeling in their ["Latent Semantic
@@ -226,3 +236,11 @@ here](http://trinker.github.io/LDAvis/example/).
     lda_model %>%
         topicmodels2LDAvis() %>%
         LDAvis::serVis("C:/Users/Tyler/Desktop/LDAvis/example")
+
+Contributing
+============
+
+You are welcome to: 
+* submit suggestions and bug-reports at: <https://github.com/trinker/topicmodels_learning/issues> 
+* send a pull request on: <https://github.com/trinker/topicmodels_learning/> 
+* compose a friendly e-mail to: <tyler.rinker@gmail.com>
