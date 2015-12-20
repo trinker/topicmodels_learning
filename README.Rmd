@@ -47,13 +47,13 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 # Articles
 
-- Blei, D. M. (2012). [Probabilistic topic models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
+- Blei, D. M. (2012). [Probabilistic topic models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. doi:10.1145/2133806.2133826
 
-- Blei, D. M. &  Lafferty, J. D. (2007) [A correlated topic model of Science](/articles/Blei2007.pdf). *The Annals of Applied Statistics 1*(1), 17-35. doi:10.1214/07-AOAS114. http://projecteuclid.org/euclid.aoas/1183143727.
+- Blei, D. M. &  Lafferty, J. D. (2007) [A correlated topic model of Science](/articles/Blei2007.pdf). *The Annals of Applied Statistics 1*(1), 17-35. doi:10.1214/07-AOAS114
 
 - Blei, D. M. &  Lafferty, J. D. (2009) [Topic models](/articles/Blei2009.pdf). In A Srivastava, M Sahami (eds.), [*Text mining: classification, clustering, and applications*](/articles/Srivastava2009.pdf). Chapman & Hall/CRC Press. 71-93.  
 
-- Blei, D. M. & McAuliffe, J. (2008). [Supervised topic models](/articles/Blei2008.pdf). In Advances in Neural Information Processing Systems 20. 1-8.
+- Blei, D. M. & McAuliffe, J. (2008). [Supervised topic models](/articles/Blei2008.pdf). In Advances in Neural Information Processing Systems 20, 1-8.
 
 - Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet Allocation](/articles/Blei2003.pdf). *Journal of Machine Learning Research, 3*, 993-1022.
 
@@ -64,13 +64,13 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
 
-- Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*. 1-4.  
+- Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*, 1-4.  
 
 - Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S., Albertson, B., et al. (2014). [Structural topic models for open ended survey responses](/articles/Roberts2014.pdf). *American Journal of Political Science, American Journal of Political Science, 58*(4), 1064-1082.
 
 - Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 
-- Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
+- Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces*, 63-70.
 
 - Taddy, M.A. (2012). [On Estimation and Selection for Topic Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th International Conference on Artificial Intelligence and Statistics (AISTATS 2012)*, 1184-1193.
 
@@ -96,7 +96,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 | topicmodels   | LDA and CTM  | Follows Blei's implementation; great vignette; takes [DTM](https://en.wikipedia.org/wiki/Document-term_matrix) |  Gr&uuml;en & Hornik |
 | stm           | Model w/ meta-data | Great documentation; nice visualization  |  Roberts, Stewart, & Tingley |
 | LDAvis        | Interactive visualization     | Aids in model interpretation  |  Sievert & Shirley  |
-| mallet        |                               |                        |               |  
+| mallet        |                               |                        | Mimno              |  
 
 ## References
 

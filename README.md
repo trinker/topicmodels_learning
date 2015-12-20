@@ -89,12 +89,11 @@ Articles
 
 -   Blei, D. M. (2012). [Probabilistic topic
     models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4,
-    77-84. DOI: 10.1145/2133806.2133826
+    77-84. <doi:10.1145/2133806.2133826>
 
 -   Blei, D. M. & Lafferty, J. D. (2007) [A correlated topic model of
     Science](/articles/Blei2007.pdf). *The Annals of Applied Statistics
-    1*(1), 17-35. <doi:10.1214/07-AOAS114>.
-    <http://projecteuclid.org/euclid.aoas/1183143727>.
+    1*(1), 17-35. <doi:10.1214/07-AOAS114>
 
 -   Blei, D. M. & Lafferty, J. D. (2009) [Topic
     models](/articles/Blei2009.pdf). In A Srivastava, M Sahami (eds.),
@@ -104,7 +103,7 @@ Articles
 
 -   Blei, D. M. & McAuliffe, J. (2008). [Supervised topic
     models](/articles/Blei2008.pdf). In Advances in Neural Information
-    Processing Systems 20. 1-8.
+    Processing Systems 20, 1-8.
 
 -   Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet
     Allocation](/articles/Blei2003.pdf). *Journal of Machine Learning
@@ -127,7 +126,7 @@ Articles
     Structural Topic Model and Applied Social
     Science](/articles/Roberts2013.pdf). *Advances in Neural Information
     Processing Systems Workshop on Topic Models: Computation,
-    Application, and Evaluation*. 1-4.
+    Application, and Evaluation*, 1-4.
 
 -   Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J.,
     Gadarian, S., Albertson, B., et al. (2014). [Structural topic models
@@ -141,7 +140,7 @@ Articles
 -   Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for
     Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf)
     *Proceedings of the Workshop on Interactive Language Learning,
-    Visualization, and Interfaces* 63-70.
+    Visualization, and Interfaces*, 63-70.
 
 -   Taddy, M.A. (2012). [On Estimation and Selection for Topic
     Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th
@@ -210,7 +209,7 @@ Package Comparisons
 <td align="left">mallet</td>
 <td align="left"></td>
 <td align="left"></td>
-<td align="left"></td>
+<td align="left">Mimno</td>
 </tr>
 </tbody>
 </table>
