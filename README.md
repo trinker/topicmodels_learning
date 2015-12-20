@@ -1,4 +1,4 @@
-topicmodels_learning
+Topic Models Learning and R Resources
 ============
 
 
