@@ -66,8 +66,7 @@ Theory
 -   Blie, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly
     Research](https://www.youtube.com/watch?v=7BMsuyBPx90)
 
--   Blie, D. (2009) [Topic Models:Part
-    I](http://videolectures.net/mlss09uk_blei_tm/#) & [Topic Models:Part
+-   Blie, D. (2009) [Topic Models: Parts I &
     II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture
     Notes](presentations/Blie2009.pdf))
 
