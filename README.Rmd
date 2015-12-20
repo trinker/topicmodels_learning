@@ -64,7 +64,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
 
-- Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*. 2013.  
+- Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*. 1-4.  
 
 - Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S., Albertson, B., et al. (2014). [Structural topic models for open ended survey responses](/articles/Roberts2014.pdf). *American Journal of Political Science, American Journal of Political Science, 58*(4), 1064-1082.
 
@@ -74,7 +74,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 # Websites & Blogs
 
-- Blei, D. (nd). [David Blei on Topic Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
+- Blei, D. (n.d.). [David Blei on Topic Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 
 - Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
 

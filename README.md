@@ -127,7 +127,7 @@ Articles
     Structural Topic Model and Applied Social
     Science](/articles/Roberts2013.pdf). *Advances in Neural Information
     Processing Systems Workshop on Topic Models: Computation,
-    Application, and Evaluation*. 2013.
+    Application, and Evaluation*. 1-4.
 
 -   Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J.,
     Gadarian, S., Albertson, B., et al. (2014). [Structural topic models
@@ -146,7 +146,7 @@ Articles
 Websites & Blogs
 ================
 
--   Blei, D. (nd). [David Blei on Topic
+-   Blei, D. (n.d.). [David Blei on Topic
     Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 
 -   Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling
