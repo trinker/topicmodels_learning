@@ -43,12 +43,12 @@ Key Players
 Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first
 introduced the notion of topic modeling in their ["Latent Semantic
 Indexing: A probabilistic analysis"](articles/Papadimitriou1997.pdf).
-Thomas Hofmann (1999) devloped "Probabilistic latent semantic indexing".
-Blei, Ng, & Jordan (2003) proposed *latent Dirichlet allocation* (LDA)
-as a means of modeling documents with multiple topics but assumes the
-topic are uncorrelated. Blei & Lafferty (2007) proposed *correlated
-topics model* (CTM), extending LDA to allow for correlations between
-topcs. Roberts, Stewart, Tingley, & Airoldi (2013) propose a
+Thomas Hofmann (1999) developed "Probabilistic latent semantic
+indexing". Blei, Ng, & Jordan (2003) proposed *latent Dirichlet
+allocation* (LDA) as a means of modeling documents with multiple topics
+but assumes the topic are uncorrelated. Blei & Lafferty (2007) proposed
+*correlated topics model* (CTM), extending LDA to allow for correlations
+between topics. Roberts, Stewart, Tingley, & Airoldi (2013) propose a
 [*Structural Topic Model*](articles/Roberts2013.pdf) (STM), allowing the
 inclusion of meta-data in the modeling process.
 
@@ -115,7 +115,7 @@ Articles
     Academy of Sciences of the United States of America, 101,
     5228â€“5235.
 
--   Gruen, B. & Hornik, K. (2011). [topicmodels: An R Package for
+-   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
     Software](articles/Grun2011.pdf), 40(13), 1-30.
 
