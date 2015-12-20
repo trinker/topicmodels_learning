@@ -91,7 +91,7 @@ Articles
 
 -   Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet
     Allocation](articles/Blie2003.pdf). *Journal of Machine Learning
-    Research, 3*, 993–1022.
+    Research, 3*, 993â€“1022.
 
 -   Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D.
     (2009). [Reading tea leaves: How humans interpret topic
@@ -100,7 +100,8 @@ Articles
 
 -   Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific
     Topics](articles/Griffiths2004.pdf). Proceedings of the National
-    Academy of Sciences of the United States of America, 101, 5228–5235.
+    Academy of Sciences of the United States of America, 101,
+    5228â€“5235.
 
 -   Gruen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
@@ -163,9 +164,6 @@ Install/Load Tools & Data
 -------------------------
 
     if (!require("pacman")) install.packages("pacman")
-
-    ## Loading required package: pacman
-
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
