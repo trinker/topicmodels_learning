@@ -148,9 +148,11 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 # Topic Modeling R Demo
 
+## topicmodels Package
+
 The .R script for this demonstration can be downloaded from [scripts/Example_topic_model_analysis.R](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
-## Install/Load Tools & Data
+### Install/Load Tools & Data
 
 ```{r}
 if (!require("pacman")) install.packages("pacman")
@@ -164,7 +166,7 @@ data(presidential_debates_2012)
 ```
 
 
-## Generate Stopwords 
+### Generate Stopwords 
 ```{r}
 stops <- c(
         tm::stopwords("english"),
@@ -174,7 +176,7 @@ stops <- c(
 ```
 
 
-## Create the DocumentTermMatrix
+### Create the DocumentTermMatrix
 
 ```{r}
 doc_term_mat <- presidential_debates_2012 %>%
@@ -184,13 +186,13 @@ doc_term_mat <- presidential_debates_2012 %>%
     gofastr::filter_documents() 
 ```
 
-## Run the Model
+### Run the Model
 
 ```{r}
 lda_model <- topicmodels::LDA(doc_term_mat, 10, control = list(seed=100))
 ```
 
-## Plot the Topics Per Person & Time
+### Plot the Topics Per Person & Time
 
 ```{r, fig.width=10, fig.height=10}
 topics <- topicmodels::posterior(lda_model, doc_term_mat)[["topics"]]
@@ -210,7 +212,7 @@ tidyr::gather(topic_dat, Topic, Proportion, -c(Person_Time)) %>%
         ggplot2::xlab("Proportion")
 ```
 
-## LDAvis of Model
+### LDAvis of Model
 
 The output from **LDAvis** is not easily embedded within an R markdown document, however, the reader may [see the results here](http://trinker.github.io/LDAvis/example/).
 

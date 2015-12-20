@@ -30,12 +30,13 @@ Table of Contents
     -   [References](#references)
     -   [Example Modeling](#example-modeling)
 -   [Topic Modeling R Demo](#topic-modeling-r-demo)
-    -   [Install/Load Tools & Data](#installload-tools--data)
-    -   [Generate Stopwords](#generate-stopwords)
-    -   [Create the DocumentTermMatrix](#create-the-documenttermmatrix)
-    -   [Run the Model](#run-the-model)
-    -   [Plot the Topics Per Person & Time](#plot-the-topics-per-person--time)
-    -   [LDAvis of Model](#ldavis-of-model)
+    -   [topicmodels Package](#topicmodels-package)
+        -   [Install/Load Tools & Data](#installload-tools--data)
+        -   [Generate Stopwords](#generate-stopwords)
+        -   [Create the DocumentTermMatrix](#create-the-documenttermmatrix)
+        -   [Run the Model](#run-the-model)
+        -   [Plot the Topics Per Person & Time](#plot-the-topics-per-person--time)
+        -   [LDAvis of Model](#ldavis-of-model)
 -   [Contributing](#contributing)
 
 Key Players
@@ -303,13 +304,18 @@ Example Modeling
 Topic Modeling R Demo
 =====================
 
+topicmodels Package
+-------------------
+
 The .R script for this demonstration can be downloaded from
 [scripts/Example\_topic\_model\_analysis.R](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
-Install/Load Tools & Data
--------------------------
+### Install/Load Tools & Data
 
     if (!require("pacman")) install.packages("pacman")
+
+    ## Loading required package: pacman
+
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
@@ -320,8 +326,7 @@ Install/Load Tools & Data
 
     data(presidential_debates_2012)
 
-Generate Stopwords
-------------------
+### Generate Stopwords
 
     stops <- c(
             tm::stopwords("english"),
@@ -329,8 +334,7 @@ Generate Stopwords
         ) %>%
         gofastr::prep_stopwords() 
 
-Create the DocumentTermMatrix
------------------------------
+### Create the DocumentTermMatrix
 
     doc_term_mat <- presidential_debates_2012 %>%
         with(gofastr::q_dtm_stem(dialogue, paste(person, time, sep = "_"))) %>%           
@@ -338,13 +342,11 @@ Create the DocumentTermMatrix
         gofastr::filter_tf_idf() %>%
         gofastr::filter_documents() 
 
-Run the Model
--------------
+### Run the Model
 
     lda_model <- topicmodels::LDA(doc_term_mat, 10, control = list(seed=100))
 
-Plot the Topics Per Person & Time
----------------------------------
+### Plot the Topics Per Person & Time
 
     topics <- topicmodels::posterior(lda_model, doc_term_mat)[["topics"]]
     topic_dat <- dplyr::add_rownames(as.data.frame(topics), "Person_Time")
@@ -364,8 +366,7 @@ Plot the Topics Per Person & Time
 
 ![](inst/figure/unnamed-chunk-6-1.png)
 
-LDAvis of Model
----------------
+### LDAvis of Model
 
 The output from **LDAvis** is not easily embedded within an R markdown
 document, however, the reader may [see the results
