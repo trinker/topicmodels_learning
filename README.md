@@ -22,11 +22,13 @@ Table of Contents
     -   [Theory](#theory)
     -   [Visualization](#visualization)
 -   [Articles](#articles)
+    -   [Applied](#applied)
+    -   [Theoretical](#theoretical)
 -   [Websites & Blogs](#websites--blogs)
 -   [R Resources](#r-resources)
     -   [Package Comparisons](#package-comparisons)
     -   [References](#references)
-    -   [Example Uses](#example-uses)
+    -   [Example Modeling](#example-modeling)
 -   [Topic Modeling R Demo](#topic-modeling-r-demo)
     -   [Install/Load Tools & Data](#installload-tools--data)
     -   [Generate Stopwords](#generate-stopwords)
@@ -87,6 +89,17 @@ Visualization
 Articles
 ========
 
+Applied
+-------
+
+Newman, D.J. & Block, S. (2006). [Probabilistic topic decomposition of
+an eighteenth-century American newspaper](/articles/Newman2006.pdf).
+*Journal of the American Society for Information Science and Technology.
+57*(6), 753-767. <doi:10.1002/asi.v57:6>
+
+Theoretical
+-----------
+
 -   Blei, D. M. (2012). [Probabilistic topic
     models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4,
     77-84. <doi:10.1145/2133806.2133826>
@@ -118,6 +131,10 @@ Articles
     Topics](/articles/Griffiths2004.pdf). Proceedings of the National
     Academy of Sciences of the United States of America, 101, 5228-5235.
 
+-   Griffiths, T.L., Steyvers, M., & Tenenbaum, J.B.T. (2007). [Topics
+    in Semantic Representation](/articles/Griffiths2007.pdf).
+    *Psychological Review, 114*(2), 211-244.
+
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
     Software](/articles/Gruen2011.pdf), 40(13), 1-30.
@@ -141,6 +158,11 @@ Articles
     Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf)
     *Proceedings of the Workshop on Interactive Language Learning,
     Visualization, and Interfaces*, 63-70.
+
+-   Steyvers, M. & Griffiths, T. (2007). [Probabilistic topic
+    models](/articles/Steyvers2007.pdf). In T. Landauer, D McNamara, S.
+    Dennis, and W. Kintsch (eds), *Latent Semantic Analysis: A Road to
+    Meaning*. Laurence Erlbaum
 
 -   Taddy, M.A. (2012). [On Estimation and Selection for Topic
     Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th
@@ -174,45 +196,56 @@ Package Comparisons
 <table>
 <thead>
 <tr class="header">
-<th align="left">package</th>
-<th align="left">function</th>
-<th align="left">pluses</th>
-<th align="left">author</th>
+<th align="left">Package</th>
+<th align="left">Functionality</th>
+<th align="left">Pluses</th>
+<th align="left">Author</th>
+<th align="left">R Language Interface</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">lda</td>
+<td align="left">lda*</td>
 <td align="left">Collapsed Gibbs for LDA</td>
-<td align="left"></td>
+<td align="left">Graphing utilities</td>
 <td align="left">Chang</td>
+<td align="left">R</td>
 </tr>
 <tr class="even">
 <td align="left">topicmodels</td>
 <td align="left">LDA and CTM</td>
-<td align="left">Follows Blei's implementation; great vignette; takes <a href="https://en.wikipedia.org/wiki/Document-term_matrix">DTM</a></td>
-<td align="left">Grüen &amp; Hornik</td>
+<td align="left">Follows Blei's implementation; great vignette; takes</td>
+<td align="left">C</td>
+<td align="left"><a href="https://en.wikipedia.org/wiki/Document-term_matrix">DTM</a></td>
 </tr>
 <tr class="odd">
 <td align="left">stm</td>
 <td align="left">Model w/ meta-data</td>
 <td align="left">Great documentation; nice visualization</td>
 <td align="left">Roberts, Stewart, &amp; Tingley</td>
+<td align="left">C</td>
 </tr>
 <tr class="even">
 <td align="left">LDAvis</td>
 <td align="left">Interactive visualization</td>
 <td align="left">Aids in model interpretation</td>
 <td align="left">Sievert &amp; Shirley</td>
+<td align="left">R + Shiny</td>
 </tr>
 <tr class="odd">
-<td align="left">mallet</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">mallet**</td>
+<td align="left">LDA</td>
+<td align="left"><a href="http://programminghistorian.org/lessons/topic-modeling-and-mallet">MALLET</a> is well known</td>
 <td align="left">Mimno</td>
+<td align="left">Java</td>
 </tr>
 </tbody>
 </table>
+
+\*[*StackExchange discussion of lda vs.
+topicmodels*](http://stats.stackexchange.com/questions/24441/two-r-packages-for-topic-modeling-lda-and-topicmodels) \*\*[*Setting
+Up
+MALLET*](http://programminghistorian.org/lessons/topic-modeling-and-mallet)
 
 References
 ----------
@@ -224,8 +257,9 @@ References
     Fitting Topic Models. Journal of Statistical
     Software](/articles/Gruen2011.pdf), 40(13), 1-30.
 
--   Mimno, D. (2013). mallet: A wrapper around the Java machine learning
-    tool MALLET. <https://CRAN.R-project.org/package=mallet>
+-   Mimno, D. (2013). [vignette-mallet: A wrapper around the Java
+    machine learning tool MALLET](/articles/Mimno2013.Rmd).
+    <https://CRAN.R-project.org/package=mallet>
 
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
@@ -236,12 +270,34 @@ References
     Interfaces* 63-70.
 
 -   Sievert, C. & Shirley, K. E.. (2014b). [Vignette: LDAvis
-    dtails.](/articles/Sievert2014b.pdf) 1-5.
+    details.](/articles/Sievert2014b.pdf) 1-5.
 
-Example Uses
-------------
+Example Modeling
+----------------
 
--   Sievert, C. (n.d.) [A topic model for movie
+-   Awati, K. (2015). [A gentle introduction to topic modeling using
+    R](https://eight2late.wordpress.com/2015/09/29/a-gentle-introduction-to-topic-modeling-using-r/)
+
+-   Dubins, M. (2013). [Topic Modeling in Python and R: A Rather Nosy
+    Analysis of the Enron Email
+    Corpus](https://dzone.com/articles/topic-modeling-python-and-r)
+
+-   Goodrich, B. (2015) [Topic Modeling Twitter Using
+    R](https://www.linkedin.com/pulse/topic-modeling-twitter-using-r-bryan-goodrich)
+    [(CODE)](https://gist.githubusercontent.com/bryangoodrich/7b5ef683ce8db592669e/raw/3402e7390d10a0282dc0d6309ed4df9a4fb1cf5d/TwitterTopics.r)
+
+-   inkhorn82 (2014). [A Delicious Analysis! (aka topic modelling using
+    recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/)
+    [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
+
+-   Jockers, M.L. (2014).[Introduction to Text Analysis and Topic
+    Modeling with
+    R](http://www.matthewjockers.net/materials/dh-2014-introduction-to-text-analysis-and-topic-modeling-with-r/)
+
+-   Medina, L. (2015). [Conspiracy Theories â€“ Topic Modeling & Keyword
+    Extraction](http://voidpatterns.org/2015/03/conspiracy-theories-topic-modeling-keyword-extraction/)
+
+-   Sievert, C. (n.d.). [A topic model for movie
     reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
 
 Topic Modeling R Demo
@@ -254,6 +310,9 @@ Install/Load Tools & Data
 -------------------------
 
     if (!require("pacman")) install.packages("pacman")
+
+    ## Loading required package: pacman
+
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
