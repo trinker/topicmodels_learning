@@ -218,12 +218,15 @@ References
 ----------
 
 -   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
-    Models. R package version 1.2.3, URL
+    Models. R package version 1.2.3,
     <http://CRAN.R-project.org/package=lda>.
 
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
     Software](/articles/Gruen2011.pdf), 40(13), 1-30.
+
+-   Mimno, D. (2013). mallet: A wrapper around the Java machine learning
+    tool MALLET. <https://CRAN.R-project.org/package=mallet>
 
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
