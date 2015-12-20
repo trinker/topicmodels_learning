@@ -3,6 +3,7 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load_gh("trinker/gofastr")
 pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
+
 ## Source topicmodels2LDAvis function
 devtools::source_url("https://gist.githubusercontent.com/trinker/477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis")
 

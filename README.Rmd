@@ -104,6 +104,8 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 # Topic Modeling R Demo
 
+The .R script for this demonstration can be downloaded from [scripts/Example_topic_model_analysis.R](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
+
 ## Install/Load Tools & Data
 
 ```{r}

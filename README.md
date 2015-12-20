@@ -217,6 +217,9 @@ References
 Topic Modeling R Demo
 =====================
 
+The .R script for this demonstration can be downloaded from
+[scripts/Example\_topic\_model\_analysis.R](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
+
 Install/Load Tools & Data
 -------------------------
 
