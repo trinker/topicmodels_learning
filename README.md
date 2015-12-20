@@ -243,8 +243,8 @@ Package Comparisons
 </table>
 
 \*[*StackExchange discussion of lda vs.
-topicmodels*](http://stats.stackexchange.com/questions/24441/two-r-packages-for-topic-modeling-lda-and-topicmodels) \*\*[*Setting
-Up
+topicmodels*](http://stats.stackexchange.com/questions/24441/two-r-packages-for-topic-modeling-lda-and-topicmodels)  
+\*\*[*Setting Up
 MALLET*](http://programminghistorian.org/lessons/topic-modeling-and-mallet)
 
 References
@@ -310,9 +310,6 @@ Install/Load Tools & Data
 -------------------------
 
     if (!require("pacman")) install.packages("pacman")
-
-    ## Loading required package: pacman
-
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 

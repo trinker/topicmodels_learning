@@ -110,7 +110,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 | LDAvis        | Interactive visualization     | Aids in model interpretation  |  Sievert & Shirley  | R + Shiny |
 | mallet**        |  LDA                             | [MALLET](http://programminghistorian.org/lessons/topic-modeling-and-mallet) is well known                       | Mimno              |  Java |
 
-\*[*StackExchange discussion of lda vs. topicmodels*](http://stats.stackexchange.com/questions/24441/two-r-packages-for-topic-modeling-lda-and-topicmodels) 
+\*[*StackExchange discussion of lda vs. topicmodels*](http://stats.stackexchange.com/questions/24441/two-r-packages-for-topic-modeling-lda-and-topicmodels)     
 \*\*[*Setting Up MALLET*](http://programminghistorian.org/lessons/topic-modeling-and-mallet)
 
 
