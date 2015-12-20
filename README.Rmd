@@ -45,7 +45,7 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 - Blei, D. M. (2012). [Probabilistic topic models](blob/master/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
 
-- Blei, D. M. &  Lafferty, J. D. (2007) [A correlated topic model of Science](Blei2007.pdf). *The Annals of Applied Statistics 1*(1), 17-35. doi:10.1214/07-AOAS114. http://projecteuclid.org/euclid.aoas/1183143727.
+- Blei, D. M. &  Lafferty, J. D. (2007) [A correlated topic model of Science](blob/master/articles/Blei2007.pdf). *The Annals of Applied Statistics 1*(1), 17-35. doi:10.1214/07-AOAS114. http://projecteuclid.org/euclid.aoas/1183143727.
 
 - Blei, D. M. &  Lafferty, J. D. (2009) [Topic models](blob/master/articles/Blei2009.pdf). In A Srivastava, M Sahami (eds.), [*Text mining: classification, clustering, and applications*](blob/master/articles/Srivastava2009.pdf). Chapman & Hall/CRC Press. 71-93.  
 

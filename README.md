@@ -64,12 +64,12 @@ Introductory
 Theory
 ------
 
--   Blie, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly
+-   Blei, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly
     Research](https://www.youtube.com/watch?v=7BMsuyBPx90)
 
--   Blie, D. (2009) [Topic Models: Parts I &
+-   Blei, D. (2009) [Topic Models: Parts I &
     II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture
-    Notes](blob/master/presentations/Blie2009.pdf))
+    Notes](blob/master/presentations/Blei2009.pdf))
 
 Visualization
 -------------
@@ -82,26 +82,26 @@ blob/master/articles
 ====================
 
 -   Blei, D. M. (2012). [Probabilistic topic
-    models](blob/master/articles/Blie2012.pdf). *Communications of the
+    models](blob/master/articles/Blei2012.pdf). *Communications of the
     ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
 
 -   Blei, D. M. & Lafferty, J. D. (2007) [A correlated topic model of
-    Science](Blie2007.pdf). *The Annals of Applied Statistics 1*(1),
-    17-35. <doi:10.1214/07-AOAS114>.
+    Science](blob/master/articles/Blei2007.pdf). *The Annals of Applied
+    Statistics 1*(1), 17-35. <doi:10.1214/07-AOAS114>.
     <http://projecteuclid.org/euclid.aoas/1183143727>.
 
 -   Blei, D. M. & Lafferty, J. D. (2009) [Topic
-    models](blob/master/articles/Blie2009.pdf). In A Srivastava, M
+    models](blob/master/articles/Blei2009.pdf). In A Srivastava, M
     Sahami (eds.), [*Text mining: classification, clustering, and
     applications*](blob/master/articles/Srivastava2009.pdf). Chapman &
     Hall/CRC Press. 71-93.
 
 -   Blei, D. M. & McAuliffe, J. (2008). [Supervised topic
-    models](blob/master/articles/Blie2008.pdf). In Advances in Neural
+    models](blob/master/articles/Blei2008.pdf). In Advances in Neural
     Information Processing Systems 20. 1-8.
 
 -   Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet
-    Allocation](blob/master/articles/Blie2003.pdf). *Journal of Machine
+    Allocation](blob/master/articles/Blei2003.pdf). *Journal of Machine
     Learning Research, 3*, 993-1022.
 
 -   Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D.
@@ -143,7 +143,7 @@ blob/master/articles
 Websites & Blogs
 ================
 
--   Blie, D. (nd). [David Blie on Topic
+-   Blei, D. (nd). [David Blei on Topic
     Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 
 -   Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling
@@ -180,7 +180,7 @@ Package Comparisons
 <tr class="even">
 <td align="left">topicmodels</td>
 <td align="left">LDA and CTM</td>
-<td align="left">Follows Blie's implementation; great vignette; takes <a href="https://en.wikipedia.org/wiki/Document-term_matrix">DTM</a></td>
+<td align="left">Follows Blei's implementation; great vignette; takes <a href="https://en.wikipedia.org/wiki/Document-term_matrix">DTM</a></td>
 <td align="left">Grüen &amp; Hornik</td>
 </tr>
 <tr class="odd">
