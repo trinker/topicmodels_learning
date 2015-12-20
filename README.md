@@ -61,6 +61,9 @@ Introductory
 -   Boyd-Graber, J. (2013). [Computational Linguistics I: Topic
     Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)
 
+-   Jordan, M. (2014) [A Short History of Topic
+    Models](https://www.youtube.com/watch?v=fBNsHPtTAGs)
+
 Theory
 ------
 

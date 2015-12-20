@@ -31,6 +31,8 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 - Boyd-Graber, J. (2013). [Computational Linguistics I: Topic Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)
 
+- Jordan, M. (2014) [A Short History of Topic Models](https://www.youtube.com/watch?v=fBNsHPtTAGs)
+
 ## Theory
 
 - Blei, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly Research](https://www.youtube.com/watch?v=7BMsuyBPx90)
