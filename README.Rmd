@@ -33,9 +33,9 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 ## Theory
 
-- Blie, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly Research](https://www.youtube.com/watch?v=7BMsuyBPx90)
+- Blei, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly Research](https://www.youtube.com/watch?v=7BMsuyBPx90)
 
-- Blie, D. (2009) [Topic Models: Parts I & II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture Notes](blob/master/presentations/Blie2009.pdf))
+- Blei, D. (2009) [Topic Models: Parts I & II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture Notes](blob/master/presentations/Blei2009.pdf))
 
 ## Visualization
 
@@ -43,15 +43,15 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 # blob/master/articles
 
-- Blei, D. M. (2012). [Probabilistic topic models](blob/master/articles/Blie2012.pdf). *Communications of the ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
+- Blei, D. M. (2012). [Probabilistic topic models](blob/master/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
 
-- Blei, D. M. &  Lafferty, J. D. (2007) [A correlated topic model of Science](Blie2007.pdf). *The Annals of Applied Statistics 1*(1), 17-35. doi:10.1214/07-AOAS114. http://projecteuclid.org/euclid.aoas/1183143727.
+- Blei, D. M. &  Lafferty, J. D. (2007) [A correlated topic model of Science](Blei2007.pdf). *The Annals of Applied Statistics 1*(1), 17-35. doi:10.1214/07-AOAS114. http://projecteuclid.org/euclid.aoas/1183143727.
 
-- Blei, D. M. &  Lafferty, J. D. (2009) [Topic models](blob/master/articles/Blie2009.pdf). In A Srivastava, M Sahami (eds.), [*Text mining: classification, clustering, and applications*](blob/master/articles/Srivastava2009.pdf). Chapman & Hall/CRC Press. 71-93.  
+- Blei, D. M. &  Lafferty, J. D. (2009) [Topic models](blob/master/articles/Blei2009.pdf). In A Srivastava, M Sahami (eds.), [*Text mining: classification, clustering, and applications*](blob/master/articles/Srivastava2009.pdf). Chapman & Hall/CRC Press. 71-93.  
 
-- Blei, D. M. & McAuliffe, J. (2008). [Supervised topic models](blob/master/articles/Blie2008.pdf). In Advances in Neural Information Processing Systems 20. 1-8.
+- Blei, D. M. & McAuliffe, J. (2008). [Supervised topic models](blob/master/articles/Blei2008.pdf). In Advances in Neural Information Processing Systems 20. 1-8.
 
-- Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet Allocation](blob/master/articles/Blie2003.pdf). *Journal of Machine Learning Research, 3*, 993-1022.
+- Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet Allocation](blob/master/articles/Blei2003.pdf). *Journal of Machine Learning Research, 3*, 993-1022.
 
 - Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D. (2009). [Reading tea leaves: How humans interpret topic models](blob/master/articles/Chang2009.pdf). In *Neural Information Processing Systems*.
     
@@ -70,7 +70,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 # Websites & Blogs
 
-- Blie, D. (nd). [David Blie on Topic Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
+- Blei, D. (nd). [David Blei on Topic Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 
 - Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
 
@@ -85,7 +85,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 | package       | function     | pluses  |  author  | 
 |-------------- | -------------|---------|----------|
 | lda           | Collapsed Gibbs for LDA     |    |  Chang   | 
-| topicmodels   | LDA and CTM  | Follows Blie's implementation; great vignette; takes [DTM](https://en.wikipedia.org/wiki/Document-term_matrix) |  Gr&uuml;en & Hornik |
+| topicmodels   | LDA and CTM  | Follows Blei's implementation; great vignette; takes [DTM](https://en.wikipedia.org/wiki/Document-term_matrix) |  Gr&uuml;en & Hornik |
 | stm           | Model w/ meta-data | Great documentation; nice visualization  |  Roberts, Stewart, & Tingley |
 | LDAvis        | Interactive visualization     | Aids in model interpretation  |  Sievert & Shirley  |
 
