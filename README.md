@@ -10,6 +10,8 @@ of documents. Typically topic modeling is used on a collection of text
 documents but can be used for other modes including use a caption
 generation for images.
 
+![](inst/figure/topic-model.jpg)
+
 
 Table of Contents
 ============

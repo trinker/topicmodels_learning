@@ -19,6 +19,8 @@ knitr::opts_chunk$set(fig.path = "inst/figure/")
 
 This is a collection documenting the resources I find related to topic models with an R flavored focus. A *topic model* is a type of [*generative*](https://en.wikipedia.org/wiki/Generative_model) model used to "discover" latent topics that compose a *corpus* or collection of documents. Typically topic modeling is used on a collection of text documents but can be used for other modes including use a caption generation for images.
 
+![](inst/figure/topic-model.jpg)
+
 # Key Players
 
 Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the notion of topic modeling in their ["Latent Semantic Indexing: A probabilistic analysis"](articles/Papadimitriou1997.pdf).  Thomas Hofmann (1999) devloped "Probabilistic latent semantic indexing".  Blei, Ng, & Jordan (2003) proposed *latent Dirichlet allocation* (LDA) as a means of modeling documents with multiple topics but assumes the topic are uncorrelated.  Blei & Lafferty (2007) proposed *correlated topics model* (CTM), extending LDA to allow for correlations between topcs.  Roberts, Stewart, Tingley, & Airoldi (2013) propose a [*Structural Topic Model*](articles/Roberts2013.pdf) (STM), allowing the inclusion of meta-data in the modeling process.
