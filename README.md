@@ -21,7 +21,7 @@ Table of Contents
     -   [Introductory](#introductory)
     -   [Theory](#theory)
     -   [Visualization](#visualization)
--   [/articles](#articles)
+-   [Articles](#articles)
 -   [Websites & Blogs](#websites--blogs)
 -   [R Resources](#r-resources)
     -   [Package Comparisons](#package-comparisons)
@@ -77,8 +77,8 @@ Visualization
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
 
-/articles
-=========
+Articles
+========
 
 -   Blei, D. M. (2012). [Probabilistic topic
     models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4,

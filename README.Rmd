@@ -41,7 +41,7 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 - statgraphics (2014) [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
 
-# /articles
+# Articles
 
 - Blei, D. M. (2012). [Probabilistic topic models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
 
