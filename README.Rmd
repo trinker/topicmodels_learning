@@ -51,12 +51,12 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 
 - Blei, D. M. & McAuliffe, J. (2008). [Supervised topic models](articles/Blie2008.pdf). In Advances in Neural Information Processing Systems 20. 1-8.
 
-- Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet Allocation](articles/Blie2003.pdf). *Journal of Machine Learning Research, 3*, 993–1022.
+- Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet Allocation](articles/Blie2003.pdf). *Journal of Machine Learning Research, 3*, 993-1022.
 
 - Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D. (2009). [Reading tea leaves: How humans interpret topic models](articles/Chang2009.pdf). In *Neural Information Processing Systems*.
     
 - Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific Topics](articles/Griffiths2004.pdf). Proceedings of the National
-Academy of Sciences of the United States of America, 101, 5228–5235.
+Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](articles/Grun2011.pdf), 40(13), 1-30. 
 
@@ -80,13 +80,26 @@ Academy of Sciences of the United States of America, 101, 5228–5235.
 
 # R Resources
 
-## lda
+## Package Comparisons
 
-## topicmodels
+| package       | function     | pluses  |  author  | 
+|-------------- | -------------|---------|----------|
+| lda           | Collapsed Gibbs for LDA     |    |  Chang   | 
+| topicmodels   | LDA and CTM  | Follows Blie's implementation; great vignette; takes [DTM](https://en.wikipedia.org/wiki/Document-term_matrix) |  Gr&uuml;en & Hornik |
+| stm           | Model w/ meta-data | great documentation; nice visualization  |  Roberts, Stewart, & Tingley |
+| LDAvis        | Interactive visualization     | Aids in model interpretation  |  Sievert & Shirley  |
 
-## stm
+## References
 
-## LDAvis
+- Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic Models. R package version 1.2.3, URL http://CRAN.R-project.org/package=lda.
+
+- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](articles/Grun2011.pdf), 40(13), 1-30. 
+
+- Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](articles/Robertsnd.pdf), 1-49.
+
+- Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for Visualizing and Interpreting Topics.](articles/Robertsnd.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
+
+
 
 
 # Topic Modeling R Demo
@@ -128,11 +141,12 @@ doc_term_mat <- presidential_debates_2012 %>%
 ## Run the Model
 
 ```{r}
-lda_model <- topicmodels::LDA(doc_term_mat, 10)
+lda_model <- topicmodels::LDA(doc_term_mat, 10, control = list(seed=100))
 ```
 
+## Plot the Topics Per Person & Time
+
 ```{r, fig.width=10, fig.height=10}
-## Plot the Topics Per Person_Time
 topics <- topicmodels::posterior(lda_model, doc_term_mat)[["topics"]]
 topic_dat <- dplyr::add_rownames(as.data.frame(topics), "Person_Time")
 colnames(topic_dat)[-1] <- apply(terms(lda_model, 10), 2, paste, collapse = ", ")
@@ -157,7 +171,7 @@ The output from **LDAvis** is not easily embedded within an R markdown document,
 ```{r, eval=FALSE}
 lda_model %>%
     topicmodels2LDAvis() %>%
-    LDAvis::serVis("C:/Users/Tyler/Desktop/LDAvis/example")
+    LDAvis::serVis()
 ```
 
 # Contributing

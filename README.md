@@ -24,15 +24,14 @@ Table of Contents
 -   [Articles](#articles)
 -   [Websites & Blogs](#websites--blogs)
 -   [R Resources](#r-resources)
-    -   [lda](#lda)
-    -   [topicmodels](#topicmodels)
-    -   [stm](#stm)
-    -   [LDAvis](#ldavis)
+    -   [Package Comparisons](#package-comparisons)
+    -   [References](#references)
 -   [Topic Modeling R Demo](#topic-modeling-r-demo)
     -   [Install/Load Tools & Data](#installload-tools--data)
     -   [Generate Stopwords](#generate-stopwords)
     -   [Create the DocumentTermMatrix](#create-the-documenttermmatrix)
     -   [Run the Model](#run-the-model)
+    -   [Plot the Topics Per Person & Time](#plot-the-topics-per-person--time)
     -   [LDAvis of Model](#ldavis-of-model)
 -   [Contributing](#contributing)
 
@@ -103,7 +102,7 @@ Articles
 
 -   Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet
     Allocation](articles/Blie2003.pdf). *Journal of Machine Learning
-    Research, 3*, 993â€“1022.
+    Research, 3*, 993-1022.
 
 -   Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D.
     (2009). [Reading tea leaves: How humans interpret topic
@@ -112,8 +111,7 @@ Articles
 
 -   Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific
     Topics](articles/Griffiths2004.pdf). Proceedings of the National
-    Academy of Sciences of the United States of America, 101,
-    5228â€“5235.
+    Academy of Sciences of the United States of America, 101, 5228-5235.
 
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
@@ -157,17 +155,64 @@ Websites & Blogs
 R Resources
 ===========
 
-lda
----
+Package Comparisons
+-------------------
 
-topicmodels
------------
+<table>
+<thead>
+<tr class="header">
+<th align="left">package</th>
+<th align="left">function</th>
+<th align="left">pluses</th>
+<th align="left">author</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">lda</td>
+<td align="left">Collapsed Gibbs for LDA</td>
+<td align="left"></td>
+<td align="left">Chang</td>
+</tr>
+<tr class="even">
+<td align="left">topicmodels</td>
+<td align="left">LDA and CTM</td>
+<td align="left">Follows Blie's implementation; great vignette; takes <a href="https://en.wikipedia.org/wiki/Document-term_matrix">DTM</a></td>
+<td align="left">Grüen &amp; Hornik</td>
+</tr>
+<tr class="odd">
+<td align="left">stm</td>
+<td align="left">Model w/ meta-data</td>
+<td align="left">great documentation; nice visualization</td>
+<td align="left">Roberts, Stewart, &amp; Tingley</td>
+</tr>
+<tr class="even">
+<td align="left">LDAvis</td>
+<td align="left">Interactive visualization</td>
+<td align="left">Aids in model interpretation</td>
+<td align="left">Sievert &amp; Shirley</td>
+</tr>
+</tbody>
+</table>
 
-stm
----
+References
+----------
 
-LDAvis
-------
+-   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
+    Models. R package version 1.2.3, URL
+    <http://CRAN.R-project.org/package=lda>.
+
+-   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
+    Fitting Topic Models. Journal of Statistical
+    Software](articles/Grun2011.pdf), 40(13), 1-30.
+
+-   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
+    Structural Topic Models](articles/Robertsnd.pdf), 1-49.
+
+-   Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for
+    Visualizing and Interpreting Topics.](articles/Robertsnd.pdf)
+    *Proceedings of the Workshop on Interactive Language Learning,
+    Visualization, and Interfaces* 63-70.
 
 Topic Modeling R Demo
 =====================
@@ -207,9 +252,11 @@ Create the DocumentTermMatrix
 Run the Model
 -------------
 
-    lda_model <- topicmodels::LDA(doc_term_mat, 10)
+    lda_model <- topicmodels::LDA(doc_term_mat, 10, control = list(seed=100))
 
-    ## Plot the Topics Per Person_Time
+Plot the Topics Per Person & Time
+---------------------------------
+
     topics <- topicmodels::posterior(lda_model, doc_term_mat)[["topics"]]
     topic_dat <- dplyr::add_rownames(as.data.frame(topics), "Person_Time")
     colnames(topic_dat)[-1] <- apply(terms(lda_model, 10), 2, paste, collapse = ", ")
@@ -237,7 +284,7 @@ here](http://trinker.github.io/LDAvis/example/).
 
     lda_model %>%
         topicmodels2LDAvis() %>%
-        LDAvis::serVis("C:/Users/Tyler/Desktop/LDAvis/example")
+        LDAvis::serVis()
 
 Contributing
 ============
