@@ -114,7 +114,7 @@ Articles
 
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
-    Software](/articles/Grun2011.pdf), 40(13), 1-30.
+    Software](/articles/Gruen2011.pdf), 40(13), 1-30.
 
 -   Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The
     Structural Topic Model and Applied Social

@@ -58,7 +58,7 @@ Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first introduced the n
 - Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific Topics](/articles/Griffiths2004.pdf). Proceedings of the National
 Academy of Sciences of the United States of America, 101, 5228-5235.
 
-- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Grun2011.pdf), 40(13), 1-30. 
+- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
 
 - Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*. 2013.  
 
