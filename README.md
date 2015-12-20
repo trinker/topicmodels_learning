@@ -21,7 +21,7 @@ Table of Contents
     -   [Introductory](#introductory)
     -   [Theory](#theory)
     -   [Visualization](#visualization)
--   [Articles](#articles)
+-   [blob/master/articles](#blobmasterarticles)
 -   [Websites & Blogs](#websites--blogs)
 -   [R Resources](#r-resources)
     -   [Package Comparisons](#package-comparisons)
@@ -41,14 +41,15 @@ Key Players
 
 Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first
 introduced the notion of topic modeling in their ["Latent Semantic
-Indexing: A probabilistic analysis"](articles/Papadimitriou1997.pdf).
-Thomas Hofmann (1999) developed "Probabilistic latent semantic
-indexing". Blei, Ng, & Jordan (2003) proposed *latent Dirichlet
-allocation* (LDA) as a means of modeling documents with multiple topics
-but assumes the topic are uncorrelated. Blei & Lafferty (2007) proposed
-*correlated topics model* (CTM), extending LDA to allow for correlations
-between topics. Roberts, Stewart, Tingley, & Airoldi (2013) propose a
-[*Structural Topic Model*](articles/Roberts2013.pdf) (STM), allowing the
+Indexing: A probabilistic
+analysis"](blob/master/articles/Papadimitriou1997.pdf). Thomas Hofmann
+(1999) developed "Probabilistic latent semantic indexing". Blei, Ng, &
+Jordan (2003) proposed *latent Dirichlet allocation* (LDA) as a means of
+modeling documents with multiple topics but assumes the topic are
+uncorrelated. Blei & Lafferty (2007) proposed *correlated topics model*
+(CTM), extending LDA to allow for correlations between topics. Roberts,
+Stewart, Tingley, & Airoldi (2013) propose a [*Structural Topic
+Model*](blob/master/articles/Roberts2013.pdf) (STM), allowing the
 inclusion of meta-data in the modeling process.
 
 Videos
@@ -68,7 +69,7 @@ Theory
 
 -   Blie, D. (2009) [Topic Models: Parts I &
     II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture
-    Notes](presentations/Blie2009.pdf))
+    Notes](blob/master/presentations/Blie2009.pdf))
 
 Visualization
 -------------
@@ -77,12 +78,12 @@ Visualization
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
 
-Articles
-========
+blob/master/articles
+====================
 
 -   Blei, D. M. (2012). [Probabilistic topic
-    models](articles/Blie2012.pdf). *Communications of the ACM, (55)*4,
-    77-84. DOI: 10.1145/2133806.2133826
+    models](blob/master/articles/Blie2012.pdf). *Communications of the
+    ACM, (55)*4, 77-84. DOI: 10.1145/2133806.2133826
 
 -   Blei, D. M. & Lafferty, J. D. (2007) [A correlated topic model of
     Science](Blie2007.pdf). *The Annals of Applied Statistics 1*(1),
@@ -90,51 +91,54 @@ Articles
     <http://projecteuclid.org/euclid.aoas/1183143727>.
 
 -   Blei, D. M. & Lafferty, J. D. (2009) [Topic
-    models](articles/Blie2009.pdf). In A Srivastava, M Sahami (eds.),
-    [*Text mining: classification, clustering, and
-    applications*](articles/Srivastava2009.pdf). Chapman & Hall/CRC
-    Press. 71-93.
+    models](blob/master/articles/Blie2009.pdf). In A Srivastava, M
+    Sahami (eds.), [*Text mining: classification, clustering, and
+    applications*](blob/master/articles/Srivastava2009.pdf). Chapman &
+    Hall/CRC Press. 71-93.
 
 -   Blei, D. M. & McAuliffe, J. (2008). [Supervised topic
-    models](articles/Blie2008.pdf). In Advances in Neural Information
-    Processing Systems 20. 1-8.
+    models](blob/master/articles/Blie2008.pdf). In Advances in Neural
+    Information Processing Systems 20. 1-8.
 
 -   Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet
-    Allocation](articles/Blie2003.pdf). *Journal of Machine Learning
-    Research, 3*, 993-1022.
+    Allocation](blob/master/articles/Blie2003.pdf). *Journal of Machine
+    Learning Research, 3*, 993-1022.
 
 -   Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D.
     (2009). [Reading tea leaves: How humans interpret topic
-    models](articles/Chang2009.pdf). In *Neural Information Processing
-    Systems*.
+    models](blob/master/articles/Chang2009.pdf). In *Neural Information
+    Processing Systems*.
 
 -   Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific
-    Topics](articles/Griffiths2004.pdf). Proceedings of the National
-    Academy of Sciences of the United States of America, 101, 5228-5235.
+    Topics](blob/master/articles/Griffiths2004.pdf). Proceedings of the
+    National Academy of Sciences of the United States of America, 101,
+    5228-5235.
 
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
-    Software](articles/Grun2011.pdf), 40(13), 1-30.
+    Software](blob/master/articles/Grun2011.pdf), 40(13), 1-30.
 
 -   Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The
     Structural Topic Model and Applied Social
-    Science](articles/Roberts2013.pdf). *Advances in Neural Information
-    Processing Systems Workshop on Topic Models: Computation,
-    Application, and Evaluation*. 2013.
+    Science](blob/master/articles/Roberts2013.pdf). *Advances in Neural
+    Information Processing Systems Workshop on Topic Models:
+    Computation, Application, and Evaluation*. 2013.
 
 -   Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J.,
     Gadarian, S., Albertson, B., et al. (2014). [Structural topic models
-    for open ended survey responses](articles/Roberts2014.pdf).
-    *American Journal of Political Science, American Journal of
-    Political Science, 58*(4), 1064-1082.
+    for open ended survey
+    responses](blob/master/articles/Roberts2014.pdf). *American Journal
+    of Political Science, American Journal of Political Science, 58*(4),
+    1064-1082.
 
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
-    Structural Topic Models](articles/Robertsnd.pdf), 1-49.
+    Structural Topic Models](blob/master/articles/Robertsnd.pdf), 1-49.
 
 -   Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for
-    Visualizing and Interpreting Topics.](articles/Robertsnd.pdf)
-    *Proceedings of the Workshop on Interactive Language Learning,
-    Visualization, and Interfaces* 63-70.
+    Visualizing and Interpreting
+    Topics.](blob/master/articles/Robertsnd.pdf) *Proceedings of the
+    Workshop on Interactive Language Learning, Visualization, and
+    Interfaces* 63-70.
 
 Websites & Blogs
 ================
@@ -203,15 +207,16 @@ References
 
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
-    Software](articles/Grun2011.pdf), 40(13), 1-30.
+    Software](blob/master/articles/Grun2011.pdf), 40(13), 1-30.
 
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
-    Structural Topic Models](articles/Robertsnd.pdf), 1-49.
+    Structural Topic Models](blob/master/articles/Robertsnd.pdf), 1-49.
 
 -   Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for
-    Visualizing and Interpreting Topics.](articles/Robertsnd.pdf)
-    *Proceedings of the Workshop on Interactive Language Learning,
-    Visualization, and Interfaces* 63-70.
+    Visualizing and Interpreting
+    Topics.](blob/master/articles/Robertsnd.pdf) *Proceedings of the
+    Workshop on Interactive Language Learning, Visualization, and
+    Interfaces* 63-70.
 
 Topic Modeling R Demo
 =====================
