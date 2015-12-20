@@ -86,7 +86,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 |-------------- | -------------|---------|----------|
 | lda           | Collapsed Gibbs for LDA     |    |  Chang   | 
 | topicmodels   | LDA and CTM  | Follows Blie's implementation; great vignette; takes [DTM](https://en.wikipedia.org/wiki/Document-term_matrix) |  Gr&uuml;en & Hornik |
-| stm           | Model w/ meta-data | great documentation; nice visualization  |  Roberts, Stewart, & Tingley |
+| stm           | Model w/ meta-data | Great documentation; nice visualization  |  Roberts, Stewart, & Tingley |
 | LDAvis        | Interactive visualization     | Aids in model interpretation  |  Sievert & Shirley  |
 
 ## References

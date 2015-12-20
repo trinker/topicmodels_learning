@@ -183,7 +183,7 @@ Package Comparisons
 <tr class="odd">
 <td align="left">stm</td>
 <td align="left">Model w/ meta-data</td>
-<td align="left">great documentation; nice visualization</td>
+<td align="left">Great documentation; nice visualization</td>
 <td align="left">Roberts, Stewart, &amp; Tingley</td>
 </tr>
 <tr class="even">
