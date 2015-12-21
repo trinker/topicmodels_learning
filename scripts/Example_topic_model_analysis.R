@@ -4,8 +4,15 @@ pacman::p_load_gh("trinker/gofastr")
 pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
 
-## Source topicmodels2LDAvis function
-devtools::source_url("https://gist.githubusercontent.com/trinker/477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis")
+## Source topicmodels2LDAvis & optimal_k functions
+invisible(lapply(
+    file.path("https://gist.githubusercontent.com/trinker", 
+        c(
+            "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
+            "9aba07ddb07ad5a0c411/raw/c44f31042fc0bae2551452ce1f191d70796a75f9/optimal_k"
+    )),
+    devtools::source_url
+))
 
 data(presidential_debates_2012)
 
@@ -24,6 +31,9 @@ doc_term_mat <- presidential_debates_2012 %>%
     gofastr::remove_stopwords(stops) %>%                                                    
     gofastr::filter_tf_idf() %>%
     gofastr::filter_documents() 
+
+## Determine Optimal Number of Topics
+optimal_k(doc_term_mat, 19)
 
 
 ## Run the Model

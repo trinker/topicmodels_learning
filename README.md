@@ -4,11 +4,11 @@ Topic Models Learning and R Resources
 
 This is a collection documenting the resources I find related to topic
 models with an R flavored focus. A *topic model* is a type of
-[*generative*](https://en.wikipedia.org/wiki/Generative_model) model
-used to "discover" latent topics that compose a *corpus* or collection
-of documents. Typically topic modeling is used on a collection of text
-documents but can be used for other modes including use a caption
-generation for images.
+[*generative*](http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm)
+model used to "discover" latent topics that compose a *corpus* or
+collection of documents. Typically topic modeling is used on a
+collection of text documents but can be used for other modes including
+use a caption generation for images.
 
 ![](inst/figure/topic-model.jpg)
 
@@ -16,6 +16,7 @@ generation for images.
 Table of Contents
 ============
 
+-   [Just the Essentials](#just-the-essentials)
 -   [Key Players](#key-players)
 -   [Videos](#videos)
     -   [Introductory](#introductory)
@@ -27,15 +28,48 @@ Table of Contents
 -   [Websites & Blogs](#websites--blogs)
 -   [R Resources](#r-resources)
     -   [Package Comparisons](#package-comparisons)
-    -   [References](#references)
+    -   [R Specific References](#r-specific-references)
     -   [Example Modeling](#example-modeling)
 -   [Topic Modeling R Demo](#topic-modeling-r-demo)
     -   [topicmodels Package](#topicmodels-package)
 -   [Contributing](#contributing)
 
-Key Players
+Just the Essentials
 ============
 
+
+This is my run down of the minimal readings, websites, videos, & scripts
+the reader needs to become failiar with topic modeling. The list is in
+an order I believe will be of greatest use and contains a nice mix of
+introduction, theory, application, and interpretation. As you want to
+learn more about topic modeling, the other sections will become more
+useful.
+
+1.  Boyd-Graber, J. (2013). [Computational Linguistics I: Topic
+    Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)  
+2.  Underwood, T. (2012) [Topic Modeling Made Just Simple
+    Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
+3.  Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
+    Tour](http://www.scottbot.net/HIAL/?p=19113)
+4.  Blei, D. M. (2012). [Probabilistic topic
+    models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4,
+    77-84. <doi:10.1145/2133806.2133826>  
+5.  inkhorn82 (2014). [A Delicious Analysis! (aka topic modelling using
+    recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/)
+    [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
+6.  Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
+    Fitting Topic Models. Journal of Statistical
+    Software](/articles/Gruen2011.pdf), 40(13), 1-30.
+7.  Marwick, B. (2014a). [The input parameters for using latent
+    Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
+8.  Sievert, C. (2014). [LDAvis: A method for visualizing and
+    interpreting topic
+    models](https://www.youtube.com/watch?v=IksL96ls4o0)
+9.  Rinker, T.W. (2015). [R Script: Example Topic Model
+    Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
+
+Key Players
+===========
 
 Papadimitriou, Raghavan, Tamaki & Vempala, Santosh (1997) first
 introduced the notion of topic modeling in their ["Latent Semantic
@@ -58,9 +92,6 @@ Introductory
 -   Boyd-Graber, J. (2013). [Computational Linguistics I: Topic
     Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)
 
--   Jordan, M. (2014) [A Short History of Topic
-    Models](https://www.youtube.com/watch?v=fBNsHPtTAGs)
-
 Theory
 ------
 
@@ -70,6 +101,9 @@ Theory
 -   Blei, D. (2009) [Topic Models: Parts I &
     II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture
     Notes](/presentations/Blei2009.pdf))
+
+-   Jordan, M. (2014) [A Short History of Topic
+    Models](https://www.youtube.com/watch?v=fBNsHPtTAGs)
 
 Visualization
 -------------
@@ -134,6 +168,10 @@ Theoretical
     Fitting Topic Models. Journal of Statistical
     Software](/articles/Gruen2011.pdf), 40(13), 1-30.
 
+-   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
+    Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
+    Economics and Business, Vienna
+
 -   Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The
     Structural Topic Model and Applied Social
     Science](/articles/Roberts2013.pdf). *Advances in Neural Information
@@ -149,10 +187,10 @@ Theoretical
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 
--   Sievert, C. & Shirley, K. E.. (2014). [LDAvis: A Method for
-    Visualizing and Interpreting Topics.](/articles/Robertsnd.pdf)
-    *Proceedings of the Workshop on Interactive Language Learning,
-    Visualization, and Interfaces*, 63-70.
+-   Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for
+    Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings
+    of the Workshop on Interactive Language Learning, Visualization, and
+    Interfaces* 63-70.
 
 -   Steyvers, M. & Griffiths, T. (2007). [Probabilistic topic
     models](/articles/Steyvers2007.pdf). In T. Landauer, D McNamara, S.
@@ -167,20 +205,37 @@ Theoretical
 Websites & Blogs
 ================
 
--   Blei, D. (n.d.). [David Blei on Topic
-    Models](https://www.cs.princeton.edu/~blei/topicmodeling.html)
+-   Blei, D. (n.d.). [Topic
+    Modeling](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 
 -   Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling
     Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
 
+-   Jones, T. (n.d.) [Topic Models Reading
+    List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
+
+-   Marwick, B. (2014a). [The input parameters for using latent
+    Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
+
+-   Marwick, B. (2014b). [Topic models: cross validation with
+    loglikelihood or
+    perplexity](http://stackoverflow.com/a/21394092/1000343)
+
 -   Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the
     Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
+
+-   Underwood, T. (2012a) [Topic Modeling Made Just Simple
+    Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
+
+-   Underwood, T. (2012b) [What kinds of â€œtopicsâ€ does topic
+    modeling actually
+    produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
 
 -   Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
     Tour](http://www.scottbot.net/HIAL/?p=19113)
 
--   Jones, T. (n.d.) [Topic Models Reading
-    List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
+-   Weingart, S. (2011). [Topic Modeling and Network
+    Analysis](http://www.scottbot.net/HIAL/?p=221)
 
 R Resources
 ===========
@@ -242,8 +297,8 @@ topicmodels*](http://stats.stackexchange.com/questions/24441/two-r-packages-for-
 \*\*[*Setting Up
 MALLET*](http://programminghistorian.org/lessons/topic-modeling-and-mallet)
 
-References
-----------
+R Specific References
+---------------------
 
 -   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
     Models. <http://CRAN.R-project.org/package=lda>.
@@ -256,15 +311,19 @@ References
     machine learning tool MALLET](/articles/Mimno2013.Rmd).
     <https://CRAN.R-project.org/package=mallet>
 
+-   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
+    Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
+    Economics and Business, Vienna
+
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 
--   Sievert, C. & Shirley, K. E.. (2014a). [LDAvis: A Method for
+-   Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for
     Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings
     of the Workshop on Interactive Language Learning, Visualization, and
     Interfaces* 63-70.
 
--   Sievert, C. & Shirley, K. E.. (2014b). [Vignette: LDAvis
+-   Sievert, C. & Shirley, K. E. (2014b). [Vignette: LDAvis
     details.](/articles/Sievert2014b.pdf) 1-5.
 
 Example Modeling
@@ -310,10 +369,18 @@ The .R script for this demonstration can be downloaded from
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
-    ## Source topicmodels2LDAvis function
-    devtools::source_url("https://gist.githubusercontent.com/trinker/477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis")
+    ## Source topicmodels2LDAvis & optimal_k functions
+    invisible(lapply(
+        file.path("https://gist.githubusercontent.com/trinker", 
+            c(
+                "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
+                "9aba07ddb07ad5a0c411/raw/c44f31042fc0bae2551452ce1f191d70796a75f9/optimal_k"
+        )),
+        devtools::source_url
+    ))
 
     ## SHA-1 hash of file is f9a066b61c9f992daff3991a3293e18897268598
+    ## SHA-1 hash of file is 72be6a27ddaf84a6229bc7391d6c11236852f75d
 
     data(presidential_debates_2012)
 
@@ -333,9 +400,22 @@ The .R script for this demonstration can be downloaded from
         gofastr::filter_tf_idf() %>%
         gofastr::filter_documents() 
 
+### Determine Optimal Number of Topics
+
+The plot below shows the log likelihoods against k (number of topics).
+It appears the optimal number of topics is between 10 and 20.
+
+    optimal_k(doc_term_mat, 19)
+
+    ## 10 of 19 iterations (Time elapsed: .1 mins)
+
+    ## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+
+![](inst/figure/unnamed-chunk-5-1.png)
+
 ### Run the Model
 
-    lda_model <- topicmodels::LDA(doc_term_mat, 10, control = list(seed=100))
+    lda_model <- topicmodels::LDA(doc_term_mat, k = 20, control = list(seed=100))
 
 ### Plot the Topics Per Person & Time
 
@@ -355,7 +435,7 @@ The .R script for this demonstration can be downloaded from
             ggplot2::guides(fill=FALSE) +
             ggplot2::xlab("Proportion")
 
-![](inst/figure/unnamed-chunk-6-1.png)
+![](inst/figure/unnamed-chunk-7-1.png)
 
 ### LDAvis of Model
 
