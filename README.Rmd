@@ -33,8 +33,9 @@ This is my run down of the minimal readings, websites, videos, & scripts the rea
 5. inkhorn82 (2014). [A Delicious Analysis! (aka topic modelling using recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/) [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
 6. Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of Statistical Software, 40*(13), 1-30. 
 7. Marwick, B. (2014a). [The input parameters for using latent Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
-8. Sievert, C. (2014). [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
-9. Rinker, T.W. (2015). [R Script: Example Topic Model Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
+8. Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding the limiting factors of topic modeling via posterior contraction analysis](/articles/Tang2014.pdf). In *31 st International Conference on Machine Learning*, 190–198.
+9. Sievert, C. (2014). [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
+10. Rinker, T.W. (2015). [R Script: Example Topic Model Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
 # Key Players
 
@@ -81,10 +82,10 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 - Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*, 1-4.  
 - Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S., Albertson, B., et al. (2014). [Structural topic models for open ended survey responses](/articles/Roberts2014.pdf). *American Journal of Political Science, American Journal of Political Science, 58*(4), 1064-1082.
 - Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
-- Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
+- Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for Visualizing and Interpreting Topics.](/articles/Sievert2014a.pdf) in *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
 - Steyvers, M. & Griffiths, T. (2007). [Probabilistic topic models](/articles/Steyvers2007.pdf). In T. Landauer, D McNamara, S. Dennis, and W. Kintsch (eds), *Latent Semantic Analysis: A Road to Meaning*. Laurence Erlbaum
 - Taddy, M.A. (2012). [On Estimation and Selection for Topic Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th International Conference on Artificial Intelligence and Statistics (AISTATS 2012)*, 1184-1193.
-
+- Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding the limiting factors of topic modeling via posterior contraction analysis](/articles/Tang2014.pdf). In *31 st International Conference on Machine Learning*, 190–198.
 
 # Websites & Blogs
 

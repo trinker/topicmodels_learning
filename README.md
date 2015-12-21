@@ -62,10 +62,14 @@ useful.
     *Journal of Statistical, 40*(13), 1-30.
 7.  Marwick, B. (2014a). [The input parameters for using latent
     Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
-8.  Sievert, C. (2014). [LDAvis: A method for visualizing and
+8.  Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding 
+    the limiting factors of topic modeling via posterior contraction 
+    analysis](/articles/Tang2014.pdf). In *31 st International Conference on 
+    Machine Learning*, 190–198.
+9.  Sievert, C. (2014). [LDAvis: A method for visualizing and
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
-9.  Rinker, T.W. (2015). [R Script: Example Topic Model
+10.  Rinker, T.W. (2015). [R Script: Example Topic Model
     Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
 Key Players
@@ -183,6 +187,10 @@ Theoretical
     Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th
     International Conference on Artificial Intelligence and Statistics
     (AISTATS 2012)*, 1184-1193.
+- Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding 
+    the limiting factors of topic modeling via posterior contraction 
+    analysis](/articles/Tang2014.pdf). In *31 st International Conference on 
+    Machine Learning*, 190–198.
 
 Websites & Blogs
 ================
