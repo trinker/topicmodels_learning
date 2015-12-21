@@ -327,6 +327,9 @@ The .R script for this demonstration can be downloaded from
 ### Install/Load Tools & Data
 
     if (!require("pacman")) install.packages("pacman")
+
+    ## Loading required package: pacman
+
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
@@ -364,14 +367,14 @@ The .R script for this demonstration can be downloaded from
 ### Determine Optimal Number of Topics
 
 The plot below shows the harmonic mean of the log likelihoods against k
-(number of topics). It appears the optimal number of topics is ~k = 18.
+(number of topics). It appears the optimal number of topics is ~k = 13.
 
     optimal_k(doc_term_mat)
 
     ## 
     ## Grab a cup of coffee this is gonna take a while...
 
-    ## Optimal number of topics = 18
+    ## Optimal number of topics = 13
 
 ![](inst/figure/unnamed-chunk-5-1.png)
 
@@ -406,6 +409,40 @@ document, however, the reader may [see the results
 here](http://trinker.github.io/LDAvis/example/).
 
     lda_model %>%
+        topicmodels2LDAvis() %>%
+        LDAvis::serVis()
+
+### Apply Model to New Data
+
+    ## Create the DocumentTermMatrix for New Data
+    doc_term_mat2 <- partial_republican_debates_2015 %>%
+        with(gofastr::q_dtm_stem(dialogue, paste(person, location, sep = "_"))) %>%           
+        gofastr::remove_stopwords(stops) %>%                                                    
+        gofastr::filter_tf_idf() %>%
+        gofastr::filter_documents() 
+
+
+    ## Run the Model for New Data
+    lda_model2 <- topicmodels::LDA(doc_term_mat2, k = k, model = lda_model, control = list(seed = 100, estimate.beta = FALSE))
+
+
+    ## Plot the Topics Per Person & Location for New Data
+    topics2 <- topicmodels::posterior(lda_model2, doc_term_mat2)[["topics"]]
+    topic_dat2 <- dplyr::add_rownames(as.data.frame(topics2), "Person_Location")
+    colnames(topic_dat2)[-1] <- apply(terms(lda_model2, 10), 2, paste, collapse = ", ")
+
+    tidyr::gather(topic_dat2, Topic, Proportion, -c(Person_Location)) %>%
+        tidyr::separate(Person_Location, c("Person", "Location"), sep = "_") %>%
+        ggplot2::ggplot(ggplot2::aes(weight=Proportion, x=Topic, fill=Topic)) +
+            ggplot2::geom_bar() +
+            ggplot2::coord_flip() +
+            ggplot2::facet_grid(Person~Location) +
+            ggplot2::guides(fill=FALSE) +
+            ggplot2::xlab("Proportion")
+
+
+    ## LDAvis of Model for New Data
+    lda_model2 %>%
         topicmodels2LDAvis() %>%
         LDAvis::serVis()
 
