@@ -8,7 +8,7 @@ models with an R flavored focus. A *topic model* is a type of
 model used to "discover" latent topics that compose a *corpus* or
 collection of documents. Typically topic modeling is used on a
 collection of text documents but can be used for other modes including
-use a caption generation for images.
+use as a caption generation for images.
 
 ![](inst/figure/topic-model.jpg)
 
