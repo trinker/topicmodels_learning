@@ -18,7 +18,7 @@ knitr::opts_knit$set(self.contained = TRUE, cache = FALSE)
 knitr::opts_chunk$set(fig.path = "inst/figure/")
 ```
 
-This is a collection documenting the resources I find related to topic models with an R flavored focus. A *topic model* is a type of [*generative*](http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm) model used to "discover" latent topics that compose a *corpus* or collection of documents. Typically topic modeling is used on a collection of text documents but can be used for other modes including use as a caption generation for images.
+This is a collection documenting the resources I find related to topic models with an R flavored focus. A *topic model* is a type of [*generative*](http://stackoverflow.com/questions/879432/what-is-the-difference-between-a-generative-and-discriminative-algorithm) model used to "discover" latent topics that compose a *corpus* or collection of documents. Typically topic modeling is used on a collection of text documents but can be used for other modes including use as caption generation for images.
 
 ![](inst/figure/topic-model.jpg)
 
