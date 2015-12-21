@@ -95,7 +95,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 - Marwick, B. (2014b). [Topic models: cross validation with loglikelihood or perplexity](http://stackoverflow.com/a/21394092/1000343)
 - Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 - Underwood, T. (2012a) [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
-- Underwood, T. (2012b) [What kinds of “topics” does topic modeling actually produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
+- Underwood, T. (2012b) [What kinds of "topics" does topic modeling actually produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
 - Weingart, S. (2012). [Topic Modeling for Humanists: A Guided Tour](http://www.scottbot.net/HIAL/?p=19113)
 - Weingart, S. (2011). [Topic Modeling and Network Analysis](http://www.scottbot.net/HIAL/?p=221)
 
@@ -120,7 +120,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 - Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic Models. http://CRAN.R-project.org/package=lda.
 - Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
 - Mimno, D. (2013). [vignette-mallet: A wrapper around the Java machine learning tool MALLET](/articles/Mimno2013.Rmd). https://CRAN.R-project.org/package=mallet
-- Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma Thesis)](/articles/Ponweiser2012.pdf). Vienna University of Economics and Business, Vienna
+- Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma Thesis)](/articles/Ponweiser2012.pdf). Vienna University of Economics and Business, Vienna.
 - Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 - Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings of the Workshop on Interactive Language Learning, Visualization, and Interfaces* 63-70.
 - Sievert, C. & Shirley, K. E. (2014b). [Vignette: LDAvis details.](/articles/Sievert2014b.pdf) 1-5.
@@ -155,7 +155,7 @@ invisible(lapply(
     file.path("https://gist.githubusercontent.com/trinker", 
         c(
             "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
-            "9aba07ddb07ad5a0c411/raw/c44f31042fc0bae2551452ce1f191d70796a75f9/optimal_k"
+            "594bd132b180a43945f7/raw/70fbb1aa2a9113837a9a9f8a6c43d884c2ef5bd0/optimal_k%25202"
     )),
     devtools::source_url
 ))
@@ -186,7 +186,7 @@ doc_term_mat <- presidential_debates_2012 %>%
 
 ### Determine Optimal Number of Topics
 
-The plot below shows the log likelihoods against k (number of topics).  It appears the optimal number of topics is between 10 and 20.
+The plot below shows the harmonic mean of the log likelihoods against k (number of topics).  It appears the optimal number of topics is $~ k = 18$.
 
 ```{r}
 optimal_k(doc_term_mat)
@@ -195,7 +195,7 @@ optimal_k(doc_term_mat)
 ### Run the Model
 
 ```{r}
-lda_model <- topicmodels::LDA(doc_term_mat, k = 19, control = list(seed=100))
+lda_model <- topicmodels::LDA(doc_term_mat, k = 18, control = list(seed=100))
 ```
 
 ### Plot the Topics Per Person & Time

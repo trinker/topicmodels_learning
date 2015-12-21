@@ -9,7 +9,7 @@ invisible(lapply(
     file.path("https://gist.githubusercontent.com/trinker", 
         c(
             "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
-            "9aba07ddb07ad5a0c411/raw/c44f31042fc0bae2551452ce1f191d70796a75f9/optimal_k"
+            "594bd132b180a43945f7/raw/70fbb1aa2a9113837a9a9f8a6c43d884c2ef5bd0/optimal_k%25202"
     )),
     devtools::source_url
 ))

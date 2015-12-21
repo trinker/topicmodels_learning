@@ -202,8 +202,8 @@ Websites & Blogs
     Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 -   Underwood, T. (2012a) [Topic Modeling Made Just Simple
     Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
--   Underwood, T. (2012b) [What kinds of â€œtopicsâ€ does topic
-    modeling actually
+-   Underwood, T. (2012b) [What kinds of "topics" does topic modeling
+    actually
     produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
 -   Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
     Tour](http://www.scottbot.net/HIAL/?p=19113)
@@ -283,7 +283,7 @@ R Specific References
     <https://CRAN.R-project.org/package=mallet>
 -   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
     Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
-    Economics and Business, Vienna
+    Economics and Business, Vienna.
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 -   Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for
@@ -335,13 +335,13 @@ The .R script for this demonstration can be downloaded from
         file.path("https://gist.githubusercontent.com/trinker", 
             c(
                 "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
-                "9aba07ddb07ad5a0c411/raw/c44f31042fc0bae2551452ce1f191d70796a75f9/optimal_k"
+                "594bd132b180a43945f7/raw/70fbb1aa2a9113837a9a9f8a6c43d884c2ef5bd0/optimal_k%25202"
         )),
         devtools::source_url
     ))
 
     ## SHA-1 hash of file is f9a066b61c9f992daff3991a3293e18897268598
-    ## SHA-1 hash of file is 72be6a27ddaf84a6229bc7391d6c11236852f75d
+    ## SHA-1 hash of file is 736d7d7355b1ae6c23d32ebcd608e0fa00694bfa
 
     data(presidential_debates_2012)
 
@@ -363,25 +363,21 @@ The .R script for this demonstration can be downloaded from
 
 ### Determine Optimal Number of Topics
 
-The plot below shows the log likelihoods against k (number of topics).
-It appears the optimal number of topics is between 10 and 20.
+The plot below shows the harmonic mean of the log likelihoods against k
+(number of topics). It appears the optimal number of topics is $~ k = 18$.
 
     optimal_k(doc_term_mat)
 
     ## 
     ## Grab a cup of coffee this is gonna take a while...
 
-    ## 10 of 30 iterations (Time elapsed: .1 mins)
-    ## 20 of 30 iterations (Time elapsed: .6 mins)
-    ## 30 of 30 iterations (Time elapsed: 1.3 mins)
-
-    ## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
+    ## Optimal number of topics = 18
 
 ![](inst/figure/unnamed-chunk-5-1.png)
 
 ### Run the Model
 
-    lda_model <- topicmodels::LDA(doc_term_mat, k = 19, control = list(seed=100))
+    lda_model <- topicmodels::LDA(doc_term_mat, k = 18, control = list(seed=100))
 
 ### Plot the Topics Per Person & Time
 
