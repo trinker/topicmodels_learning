@@ -31,7 +31,7 @@ This is my run down of the minimal readings, websites, videos, & scripts the rea
 3. Weingart, S. (2012). [Topic Modeling for Humanists: A Guided Tour](http://www.scottbot.net/HIAL/?p=19113)
 4. Blei, D. M. (2012). [Probabilistic topic models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. doi:10.1145/2133806.2133826    
 5. inkhorn82 (2014). [A Delicious Analysis! (aka topic modelling using recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/) [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
-6. Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
+6. Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of Statistical Software, 40*(13), 1-30. 
 7. Marwick, B. (2014a). [The input parameters for using latent Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
 8. Sievert, C. (2014). [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
 9. Rinker, T.W. (2015). [R Script: Example Topic Model Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
@@ -76,7 +76,7 @@ Newman, D.J. & Block, S. (2006). [Probabilistic topic decomposition of an eighte
 - Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific Topics](/articles/Griffiths2004.pdf). Proceedings of the National
 Academy of Sciences of the United States of America, 101, 5228-5235.
 - Griffiths, T.L., Steyvers, M., & Tenenbaum, J.B.T. (2007). [Topics in Semantic Representation](/articles/Griffiths2007.pdf). *Psychological Review, 114*(2), 211-244.
-- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
+- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of Statistical Software, 40*(13), 1-30. 
 - Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma Thesis)](/articles/Ponweiser2012.pdf). Vienna University of Economics and Business, Vienna
 - Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*, 1-4.  
 - Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S., Albertson, B., et al. (2014). [Structural topic models for open ended survey responses](/articles/Roberts2014.pdf). *American Journal of Political Science, American Journal of Political Science, 58*(4), 1064-1082.
@@ -118,7 +118,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 ## R Specific References
 
 - Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic Models. http://CRAN.R-project.org/package=lda.
-- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models. Journal of Statistical Software](/articles/Gruen2011.pdf), 40(13), 1-30. 
+- Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of Statistical Software, 40*(13), 1-30. 
 - Mimno, D. (2013). [vignette-mallet: A wrapper around the Java machine learning tool MALLET](/articles/Mimno2013.Rmd). https://CRAN.R-project.org/package=mallet
 - Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma Thesis)](/articles/Ponweiser2012.pdf). Vienna University of Economics and Business, Vienna.
 - Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for Structural Topic Models](/articles/Robertsnd.pdf), 1-49.

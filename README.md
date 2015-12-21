@@ -58,8 +58,8 @@ useful.
     recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/)
     [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
 6.  Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
-    Fitting Topic Models. Journal of Statistical
-    Software](/articles/Gruen2011.pdf), 40(13), 1-30.
+    Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
+    *Journal of Statistical, 40*(13), 1-30.
 7.  Marwick, B. (2014a). [The input parameters for using latent
     Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
 8.  Sievert, C. (2014). [LDAvis: A method for visualizing and
@@ -154,8 +154,8 @@ Theoretical
     in Semantic Representation](/articles/Griffiths2007.pdf).
     *Psychological Review, 114*(2), 211-244.
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
-    Fitting Topic Models. Journal of Statistical
-    Software](/articles/Gruen2011.pdf), 40(13), 1-30.
+    Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
+    *Journal of Statistical, 40*(13), 1-30.
 -   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
     Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
     Economics and Business, Vienna
@@ -276,8 +276,8 @@ R Specific References
 -   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
     Models. <http://CRAN.R-project.org/package=lda>.
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
-    Fitting Topic Models. Journal of Statistical
-    Software](/articles/Gruen2011.pdf), 40(13), 1-30.
+    Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
+    *Journal of Statistical, 40*(13), 1-30.
 -   Mimno, D. (2013). [vignette-mallet: A wrapper around the Java
     machine learning tool MALLET](/articles/Mimno2013.Rmd).
     <https://CRAN.R-project.org/package=mallet>
