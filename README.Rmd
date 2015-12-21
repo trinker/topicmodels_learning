@@ -186,7 +186,7 @@ doc_term_mat <- presidential_debates_2012 %>%
 
 ### Determine Optimal Number of Topics
 
-The plot below shows the harmonic mean of the log likelihoods against k (number of topics).  It appears the optimal number of topics is $~ k = 18$.
+The plot below shows the harmonic mean of the log likelihoods against k (number of topics).  It appears the optimal number of topics is ~k = 18.
 
 ```{r}
 optimal_k(doc_term_mat)

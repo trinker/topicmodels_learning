@@ -364,7 +364,7 @@ The .R script for this demonstration can be downloaded from
 ### Determine Optimal Number of Topics
 
 The plot below shows the harmonic mean of the log likelihoods against k
-(number of topics). It appears the optimal number of topics is $~ k = 18$.
+(number of topics). It appears the optimal number of topics is ~k = 18.
 
     optimal_k(doc_term_mat)
 
