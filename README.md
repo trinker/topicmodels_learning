@@ -160,6 +160,9 @@ Theoretical
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
     *Journal of Statistical, 40*(13), 1-30.
+-   Mimno, D. & A. Mccallum. (2007). [Organizing the OCA: learning faceted 
+    subjects from a library of digital books](/articles/Mimno2007.pdf). In 
+    *Joint Conference on Digital Libraries*. ACM Press, New York, NY, 376–385.
 -   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
     Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
     Economics and Business, Vienna

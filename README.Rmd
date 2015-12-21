@@ -78,6 +78,7 @@ Newman, D.J. & Block, S. (2006). [Probabilistic topic decomposition of an eighte
 Academy of Sciences of the United States of America, 101, 5228-5235.
 - Griffiths, T.L., Steyvers, M., & Tenenbaum, J.B.T. (2007). [Topics in Semantic Representation](/articles/Griffiths2007.pdf). *Psychological Review, 114*(2), 211-244.
 - Gr&uuml;en, B. & Hornik, K. (2011). [topicmodels: An R Package for Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of Statistical Software, 40*(13), 1-30. 
+- Mimno, D. & A. Mccallum. (2007). [Organizing the OCA: learning faceted subjects from a library of digital books](/articles/Mimno2007.pdf). In *Joint Conference on Digital Libraries*. ACM Press, New York, NY, 376–385.
 - Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma Thesis)](/articles/Ponweiser2012.pdf). Vienna University of Economics and Business, Vienna
 - Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The Structural Topic Model and Applied Social Science](/articles/Roberts2013.pdf). *Advances in Neural Information Processing Systems Workshop on Topic Models: Computation, Application, and Evaluation*, 1-4.  
 - Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J., Gadarian, S., Albertson, B., et al. (2014). [Structural topic models for open ended survey responses](/articles/Roberts2014.pdf). *American Journal of Political Science, American Journal of Political Science, 58*(4), 1064-1082.
