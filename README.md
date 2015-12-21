@@ -380,7 +380,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
 
 ### Run the Model
 
-    lda_model <- topicmodels::LDA(doc_term_mat, k = 18, control = list(seed=100))
+    lda_model <- topicmodels::LDA(doc_term_mat, k = 13, control = list(seed=100))
 
 ### Plot the Topics Per Person & Time
 
