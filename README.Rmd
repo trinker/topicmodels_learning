@@ -189,13 +189,13 @@ doc_term_mat <- presidential_debates_2012 %>%
 The plot below shows the log likelihoods against k (number of topics).  It appears the optimal number of topics is between 10 and 20.
 
 ```{r}
-optimal_k(doc_term_mat, 19)
+optimal_k(doc_term_mat)
 ```
 
 ### Run the Model
 
 ```{r}
-lda_model <- topicmodels::LDA(doc_term_mat, k = 20, control = list(seed=100))
+lda_model <- topicmodels::LDA(doc_term_mat, k = 19, control = list(seed=100))
 ```
 
 ### Plot the Topics Per Person & Time

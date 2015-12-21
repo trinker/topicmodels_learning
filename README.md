@@ -366,9 +366,14 @@ The .R script for this demonstration can be downloaded from
 The plot below shows the log likelihoods against k (number of topics).
 It appears the optimal number of topics is between 10 and 20.
 
-    optimal_k(doc_term_mat, 19)
+    optimal_k(doc_term_mat)
 
-    ## 10 of 19 iterations (Time elapsed: .2 mins)
+    ## 
+    ## Grab a cup of coffee this is gonna take a while...
+
+    ## 10 of 30 iterations (Time elapsed: .1 mins)
+    ## 20 of 30 iterations (Time elapsed: .6 mins)
+    ## 30 of 30 iterations (Time elapsed: 1.3 mins)
 
     ## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
 
@@ -376,7 +381,7 @@ It appears the optimal number of topics is between 10 and 20.
 
 ### Run the Model
 
-    lda_model <- topicmodels::LDA(doc_term_mat, k = 20, control = list(seed=100))
+    lda_model <- topicmodels::LDA(doc_term_mat, k = 19, control = list(seed=100))
 
 ### Plot the Topics Per Person & Time
 

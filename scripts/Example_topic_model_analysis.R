@@ -33,11 +33,11 @@ doc_term_mat <- presidential_debates_2012 %>%
     gofastr::filter_documents() 
 
 ## Determine Optimal Number of Topics
-optimal_k(doc_term_mat, 19)
+optimal_k(doc_term_mat)
 
 
 ## Run the Model
-lda_model <- topicmodels::LDA(doc_term_mat, 10, control = list(seed=100))
+lda_model <- topicmodels::LDA(doc_term_mat, k=19, control = list(seed=100))
 
 
 ## Plot the Topics Per Person & Time
