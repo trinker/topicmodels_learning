@@ -97,11 +97,9 @@ Theory
 
 -   Blei, D. (2007) [Modeling Science: Dynamic Topic Models of Scholarly
     Research](https://www.youtube.com/watch?v=7BMsuyBPx90)
-
 -   Blei, D. (2009) [Topic Models: Parts I &
     II](http://videolectures.net/mlss09uk_blei_tm/#) ([Lecture
     Notes](/presentations/Blei2009.pdf))
-
 -   Jordan, M. (2014) [A Short History of Topic
     Models](https://www.youtube.com/watch?v=fBNsHPtTAGs)
 
@@ -111,7 +109,6 @@ Visualization
 -   Sievert, C. (2014) [LDAvis: A method for visualizing and
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
-
 -   Maybe, B. (2015) [SavvySharpa: Visualizing Topic
     Models](https://www.youtube.com/watch?v=tGxW2BzC_DU)
 
@@ -132,71 +129,56 @@ Theoretical
 -   Blei, D. M. (2012). [Probabilistic topic
     models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4,
     77-84. <doi:10.1145/2133806.2133826>
-
 -   Blei, D. M. & Lafferty, J. D. (2007) [A correlated topic model of
     Science](/articles/Blei2007.pdf). *The Annals of Applied Statistics
     1*(1), 17-35. <doi:10.1214/07-AOAS114>
-
 -   Blei, D. M. & Lafferty, J. D. (2009) [Topic
     models](/articles/Blei2009.pdf). In A Srivastava, M Sahami (eds.),
     [*Text mining: classification, clustering, and
     applications*](/articles/Srivastava2009.pdf). Chapman & Hall/CRC
-    Press. 71-93.
-
+    Press. 71-93.  
 -   Blei, D. M. & McAuliffe, J. (2008). [Supervised topic
     models](/articles/Blei2008.pdf). In Advances in Neural Information
     Processing Systems 20, 1-8.
-
 -   Blei, D. M., Ng, A.Y., & Jordan, M.I. (2003). [Latent Dirichlet
     Allocation](/articles/Blei2003.pdf). *Journal of Machine Learning
     Research, 3*, 993-1022.
-
 -   Chang, J., Boyd-Graber, J. , Wang, C., Gerrish, S., & Blei. D.
     (2009). [Reading tea leaves: How humans interpret topic
     models](/articles/Chang2009.pdf). In *Neural Information Processing
     Systems*.
-
 -   Griffiths, T.L. & Steyvers, M. (2004). [Finding Scientific
     Topics](/articles/Griffiths2004.pdf). Proceedings of the National
     Academy of Sciences of the United States of America, 101, 5228-5235.
-
 -   Griffiths, T.L., Steyvers, M., & Tenenbaum, J.B.T. (2007). [Topics
     in Semantic Representation](/articles/Griffiths2007.pdf).
     *Psychological Review, 114*(2), 211-244.
-
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
     Software](/articles/Gruen2011.pdf), 40(13), 1-30.
-
 -   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
     Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
     Economics and Business, Vienna
-
 -   Roberts M.E., Stewart B.M., Tingley D., & Airoldi E.M. (2013) [The
     Structural Topic Model and Applied Social
     Science](/articles/Roberts2013.pdf). *Advances in Neural Information
     Processing Systems Workshop on Topic Models: Computation,
-    Application, and Evaluation*, 1-4.
-
+    Application, and Evaluation*, 1-4.  
 -   Roberts, M., Stewart, B., Tingley, D., Lucas, C., Leder-Luis, J.,
     Gadarian, S., Albertson, B., et al. (2014). [Structural topic models
     for open ended survey responses](/articles/Roberts2014.pdf).
     *American Journal of Political Science, American Journal of
     Political Science, 58*(4), 1064-1082.
-
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
-
 -   Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for
     Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings
     of the Workshop on Interactive Language Learning, Visualization, and
     Interfaces* 63-70.
-
 -   Steyvers, M. & Griffiths, T. (2007). [Probabilistic topic
     models](/articles/Steyvers2007.pdf). In T. Landauer, D McNamara, S.
     Dennis, and W. Kintsch (eds), *Latent Semantic Analysis: A Road to
     Meaning*. Laurence Erlbaum
-
 -   Taddy, M.A. (2012). [On Estimation and Selection for Topic
     Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th
     International Conference on Artificial Intelligence and Statistics
@@ -207,33 +189,24 @@ Websites & Blogs
 
 -   Blei, D. (n.d.). [Topic
     Modeling](https://www.cs.princeton.edu/~blei/topicmodeling.html)
-
 -   Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling
     Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
-
 -   Jones, T. (n.d.) [Topic Models Reading
     List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
-
 -   Marwick, B. (2014a). [The input parameters for using latent
     Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
-
 -   Marwick, B. (2014b). [Topic models: cross validation with
     loglikelihood or
     perplexity](http://stackoverflow.com/a/21394092/1000343)
-
 -   Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the
     Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
-
 -   Underwood, T. (2012a) [Topic Modeling Made Just Simple
     Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
-
 -   Underwood, T. (2012b) [What kinds of â€œtopicsâ€ does topic
     modeling actually
     produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
-
 -   Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
     Tour](http://www.scottbot.net/HIAL/?p=19113)
-
 -   Weingart, S. (2011). [Topic Modeling and Network
     Analysis](http://www.scottbot.net/HIAL/?p=221)
 
@@ -302,27 +275,21 @@ R Specific References
 
 -   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
     Models. <http://CRAN.R-project.org/package=lda>.
-
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
     Fitting Topic Models. Journal of Statistical
     Software](/articles/Gruen2011.pdf), 40(13), 1-30.
-
 -   Mimno, D. (2013). [vignette-mallet: A wrapper around the Java
     machine learning tool MALLET](/articles/Mimno2013.Rmd).
     <https://CRAN.R-project.org/package=mallet>
-
 -   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
     Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
     Economics and Business, Vienna
-
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
-
 -   Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for
     Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings
     of the Workshop on Interactive Language Learning, Visualization, and
     Interfaces* 63-70.
-
 -   Sievert, C. & Shirley, K. E. (2014b). [Vignette: LDAvis
     details.](/articles/Sievert2014b.pdf) 1-5.
 
@@ -331,26 +298,20 @@ Example Modeling
 
 -   Awati, K. (2015). [A gentle introduction to topic modeling using
     R](https://eight2late.wordpress.com/2015/09/29/a-gentle-introduction-to-topic-modeling-using-r/)
-
 -   Dubins, M. (2013). [Topic Modeling in Python and R: A Rather Nosy
     Analysis of the Enron Email
     Corpus](https://dzone.com/articles/topic-modeling-python-and-r)
-
 -   Goodrich, B. (2015) [Topic Modeling Twitter Using
     R](https://www.linkedin.com/pulse/topic-modeling-twitter-using-r-bryan-goodrich)
     [(CODE)](https://gist.githubusercontent.com/bryangoodrich/7b5ef683ce8db592669e/raw/3402e7390d10a0282dc0d6309ed4df9a4fb1cf5d/TwitterTopics.r)
-
 -   inkhorn82 (2014). [A Delicious Analysis! (aka topic modelling using
     recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/)
     [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
-
 -   Jockers, M.L. (2014).[Introduction to Text Analysis and Topic
     Modeling with
     R](http://www.matthewjockers.net/materials/dh-2014-introduction-to-text-analysis-and-topic-modeling-with-r/)
-
 -   Medina, L. (2015). [Conspiracy Theories â€“ Topic Modeling & Keyword
     Extraction](http://voidpatterns.org/2015/03/conspiracy-theories-topic-modeling-keyword-extraction/)
-
 -   Sievert, C. (n.d.). [A topic model for movie
     reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
 
@@ -407,7 +368,7 @@ It appears the optimal number of topics is between 10 and 20.
 
     optimal_k(doc_term_mat, 19)
 
-    ## 10 of 19 iterations (Time elapsed: .1 mins)
+    ## 10 of 19 iterations (Time elapsed: .2 mins)
 
     ## geom_smooth: method="auto" and size of largest group is <1000, so using loess. Use 'method = x' to change the smoothing method.
 
