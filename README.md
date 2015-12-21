@@ -65,7 +65,7 @@ useful.
 8.  Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding 
     the limiting factors of topic modeling via posterior contraction 
     analysis](/articles/Tang2014.pdf). In *31 st International Conference on 
-    Machine Learning*, 190–198.
+    Machine Learning*, 190-198.
 9.  Sievert, C. (2014). [LDAvis: A method for visualizing and
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
@@ -190,7 +190,7 @@ Theoretical
 - Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding 
     the limiting factors of topic modeling via posterior contraction 
     analysis](/articles/Tang2014.pdf). In *31 st International Conference on 
-    Machine Learning*, 190–198.
+    Machine Learning*, 190-198.
 
 Websites & Blogs
 ================
