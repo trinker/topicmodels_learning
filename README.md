@@ -310,7 +310,7 @@ Example Modeling
 -   Jockers, M.L. (2014).[Introduction to Text Analysis and Topic
     Modeling with
     R](http://www.matthewjockers.net/materials/dh-2014-introduction-to-text-analysis-and-topic-modeling-with-r/)
--   Medina, L. (2015). [Conspiracy Theories â€“ Topic Modeling & Keyword
+-   Medina, L. (2015). [Conspiracy Theories - Topic Modeling & Keyword
     Extraction](http://voidpatterns.org/2015/03/conspiracy-theories-topic-modeling-keyword-extraction/)
 -   Sievert, C. (n.d.). [A topic model for movie
     reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
