@@ -423,7 +423,8 @@ here](http://trinker.github.io/LDAvis/example/).
 
 
     ## Run the Model for New Data
-    lda_model2 <- topicmodels::LDA(doc_term_mat2, k = k, model = lda_model, control = list(seed = 100, estimate.beta = FALSE))
+    lda_model2 <- topicmodels::LDA(doc_term_mat2, k = k, model = lda_model, 
+        control = list(seed = 100, estimate.beta = FALSE))
 
 
     ## Plot the Topics Per Person & Location for New Data
