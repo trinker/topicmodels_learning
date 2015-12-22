@@ -24,7 +24,7 @@ This is a collection documenting the resources I find related to topic models wi
 
 # Just the Essentials
 
-This is my run down of the minimal readings, websites, videos, & scripts the reader needs to become failiar with topic modeling.  The list is in an order I believe will be of greatest use and contains a nice mix of introduction, theory, application, and interpretation.  As you want to learn more about topic modeling, the other sections will become more useful.
+This is my run down of the minimal readings, websites, videos, & scripts the reader needs to become familiar with topic modeling.  The list is in an order I believe will be of greatest use and contains a nice mix of introduction, theory, application, and interpretation.  As you want to learn more about topic modeling, the other sections will become more useful.
 
 1. Boyd-Graber, J. (2013). [Computational Linguistics I: Topic Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)    
 2. Underwood, T. (2012) [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
@@ -240,7 +240,7 @@ tidyr::gather(topic_dat, Topic, Proportion, -c(Person_Time)) %>%
 heatmap(topics, scale = "none")
 ```
 
-### Network of the Word Distributions Over Topics
+### Network of the Word Distributions Over Topics (Topic Relation)
 
 ```{r}
 post <- topicmodels::posterior(lda_model)

@@ -39,7 +39,7 @@ Just the Essentials
 
 
 This is my run down of the minimal readings, websites, videos, & scripts
-the reader needs to become failiar with topic modeling. The list is in
+the reader needs to become familiar with topic modeling. The list is in
 an order I believe will be of greatest use and contains a nice mix of
 introduction, theory, application, and interpretation. As you want to
 learn more about topic modeling, the other sections will become more
@@ -432,7 +432,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
 
 ![](inst/figure/unnamed-chunk-9-1.png)
 
-### Network of the Word Distributions Over Topics
+### Network of the Word Distributions Over Topics  (Topic Relation)
 
     post <- topicmodels::posterior(lda_model)
 
