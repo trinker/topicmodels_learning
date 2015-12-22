@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Rprofile
+optimal_k2.R
+optimal_k1.R
