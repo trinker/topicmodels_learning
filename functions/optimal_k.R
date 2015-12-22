@@ -154,7 +154,7 @@ harmonicMean <- function(logLikelihoods, precision=2000L) {
     as.double(llMed - log(Rmpfr::mean(exp(-Rmpfr::mpfr(logLikelihoods, prec = precision) + llMed))))
 }
 
-optimal_k2 <- function(x, max.k = 30, burnin = 1000, iter = 1000, keep = 50, method = "Gibbs", ...){
+optimal_k2 <- function(x, ...){
 
     if (max.k > 20) {
         message("\nGrab a cup of coffee this is gonna take a while...\n")
@@ -168,7 +168,7 @@ optimal_k2 <- function(x, max.k = 30, burnin = 1000, iter = 1000, keep = 50, met
             elapsed <- gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
             cat(sprintf("%s of %s iterations (Time elapsed: %s mins)\n", k, max.k, elapsed)); flush.console()
         }
-        topicmodels::LDA(x, k = k, method = method, control = list(burnin = burnin, iter = iter, keep = keep, ...))
+        topicmodels::LDA(x, k = k, ...))
     })
 
     out <- data.frame(

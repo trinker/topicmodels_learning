@@ -345,7 +345,7 @@ The .R script for this demonstration can be downloaded from
     ## Source topicmodels2LDAvis & optimal_k functions
     invisible(lapply(
         file.path(
-            "https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts", 
+            "https://raw.githubusercontent.com/trinker/topicmodels_learning/master/functions", 
             c("topicmodels2LDAvis.R", "optimal_k.R")
         ),
         devtools::source_url
