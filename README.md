@@ -340,7 +340,7 @@ The .R script for this demonstration can be downloaded from
 
     if (!require("pacman")) install.packages("pacman")
     pacman::p_load_gh("trinker/gofastr")
-    pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
+    pacman::p_load(tm, topicmodels, dplyr, tidyr, igraph, devtools, LDAvis, ggplot2)
 
     ## Source topicmodels2LDAvis & optimal_k functions
     invisible(lapply(
@@ -393,9 +393,9 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## Grab a cup of coffee this is gonna take a while...
 
     ## 10 of 30 iterations (Time elapsed: .3 mins)
-    ## 20 of 30 iterations (Time elapsed: 1.1 mins)
-    ## 30 of 30 iterations (Time elapsed: 2.4 mins)
-    ## Optimal number of topics = 17
+    ## 20 of 30 iterations (Time elapsed: 1.2 mins)
+    ## 30 of 30 iterations (Time elapsed: 2.6 mins)
+    ## Optimal number of topics = 15
 
     k
 
@@ -425,6 +425,39 @@ The plot below shows the harmonic mean of the log likelihoods against k
             ggplot2::xlab("Proportion")
 
 ![](inst/figure/unnamed-chunk-8-1.png)
+
+### Plot the Topics Matrix as a Heatmap
+
+    heatmap(topics, scale = "none")
+
+![](inst/figure/unnamed-chunk-9-1.png)
+
+### Network of the Word Distributions Over Topics
+
+    post <- topicmodels::posterior(lda_model)
+
+    cor_mat <- cor(t(post[["terms"]]))
+    cor_mat[ cor_mat < .05 ] <- 0
+    diag(cor_mat) <- 0
+
+    graph <- graph.adjacency(cor_mat, weighted=TRUE, mode="lower")
+    graph <- delete.edges(graph, E(graph)[ weight < 0.05])
+
+    E(graph)$edge.width <- E(graph)$weight*10
+    E(graph)$color <- "blue"
+    V(graph)$color <- "grey75"
+    V(graph)$frame.color <- "grey85"
+    V(graph)$label <- paste("Topic", V(graph))
+    V(graph)$label.color <- "grey30"
+    V(graph)$size <- colSums(post[["topics"]]) * 20
+
+    par(mar=c(0, 0, 3,0))
+    set.seed(110)
+    plot.igraph(graph, edge.width = E(graph)$edge.width, 
+        vertex.color = adjustcolor("black", alpha.f = .2))
+    title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
+
+![](inst/figure/unnamed-chunk-10-1.png)
 
 ### LDAvis of Model
 
