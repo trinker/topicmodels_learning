@@ -139,7 +139,7 @@ optimal_k1 <- function(x, max.k = 30, burnin = 1000, iter = 1000, keep = 50, met
     })
 
     out <- c(2:max.k)[which.max(hm_many)]
-
+    if (which.max(hm_many) == max.k) warning("Optimal K is last value; suggest increasing `max.k`")
     class(out) <- c("optimal_k", "optimal_k1", class(out))
     attributes(out)[["k_dataframe"]] <- data.frame(
         k = 2:max.k, 

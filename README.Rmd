@@ -154,11 +154,10 @@ pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
 ## Source topicmodels2LDAvis & optimal_k functions
 invisible(lapply(
-    file.path("https://gist.githubusercontent.com/trinker", 
-        c(
-            "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
-            "e448c14f7dfc668a633b/raw/6976989f561bba13069f4204c47ff0348974573f/optimal_k.R"
-    )),
+    file.path(
+        "https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts", 
+        c("topicmodels2LDAvis.R", "optimal_k.R")
+    ),
     devtools::source_url
 ))
 
@@ -186,18 +185,31 @@ doc_term_mat <- presidential_debates_2012 %>%
     gofastr::filter_documents() 
 ```
 
+### Control List
+
+```{r}
+seed <- 100
+burnin <- 1000
+iter <- 1000
+keep <- 50
+
+control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
+```
+
 ### Determine Optimal Number of Topics
 
 The plot below shows the harmonic mean of the log likelihoods against k (number of topics).  It appears the optimal number of topics is ~k = 13.
 
 ```{r}
-optimal_k(doc_term_mat)
+k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
+k
 ```
 
 ### Run the Model
 
 ```{r}
-lda_model <- topicmodels::LDA(doc_term_mat, k = 13, control = list(seed=100))
+lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 
+    control = control)
 ```
 
 ### Plot the Topics Per Person & Time
@@ -230,6 +242,18 @@ lda_model %>%
     LDAvis::serVis()
 ```
 
+```{r, echo=FALSE, message=FALSE, results="hide"}
+targ <- "C:/Users/Tyler/GitHub/trinker.github.com/LDAvis/example/lda.json"
+unlink(targ,,TRUE)
+temp <- tempfile()
+
+lda_model %>%
+    topicmodels2LDAvis() %>%
+    LDAvis::serVis(temp, open.browser = FALSE) %>% 
+    invisible()
+
+file.copy(file.path(temp, "lda.json"), pathr::parse_path(targ) %>% pathr::front())
+```
 
 ### Apply Model to New Data
 
@@ -240,6 +264,11 @@ doc_term_mat2 <- partial_republican_debates_2015 %>%
     gofastr::remove_stopwords(stops) %>%                                                    
     gofastr::filter_tf_idf() %>%
     gofastr::filter_documents() 
+
+
+## Update Control List
+control2 <- control
+control2[["estimate.beta"]] <- FALSE
 
 
 ## Run the Model for New Data

@@ -6,11 +6,10 @@ pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
 ## Source topicmodels2LDAvis & optimal_k functions
 invisible(lapply(
-    file.path("https://gist.githubusercontent.com/trinker", 
-        c(
-            "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
-            "e448c14f7dfc668a633b/raw/6976989f561bba13069f4204c47ff0348974573f/optimal_k.R"
-    )),
+    file.path(
+        "https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts", 
+        c("topicmodels2LDAvis.R", "optimal_k.R")
+    ),
     devtools::source_url
 ))
 
@@ -32,18 +31,20 @@ doc_term_mat <- presidential_debates_2012 %>%
     gofastr::filter_tf_idf() %>%
     gofastr::filter_documents() 
 
-## Control List
-seed <- 100, 
-burnin <- 4000, 
-iter <- 2000, 
-keep <- 5
-thin <- 500
 
-control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep, thin = thin)
+## Control List
+seed <- 100
+burnin <- 1000
+iter <- 1000
+keep <- 50
+
+control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
+
 
 ## Determine Optimal Number of Topics
-k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep, thin = thin)
+k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
 k
+
 
 ## Run the Model
 lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 

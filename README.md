@@ -58,18 +58,18 @@ useful.
     recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/)
     [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
 6.  Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
-    Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
-    *Journal of Statistical, 40*(13), 1-30.
+    Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of
+    Statistical Software, 40*(13), 1-30.
 7.  Marwick, B. (2014a). [The input parameters for using latent
     Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
-8.  Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding 
-    the limiting factors of topic modeling via posterior contraction 
-    analysis](/articles/Tang2014.pdf). In *31 st International Conference on 
-    Machine Learning*, 190-198.
+8.  Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014).
+    [Understanding the limiting factors of topic modeling via posterior
+    contraction analysis](/articles/Tang2014.pdf). In *31 st
+    International Conference on Machine Learning*, 190-198.
 9.  Sievert, C. (2014). [LDAvis: A method for visualizing and
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
-10.  Rinker, T.W. (2015). [R Script: Example Topic Model
+10. Rinker, T.W. (2015). [R Script: Example Topic Model
     Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
 Key Players
@@ -158,11 +158,12 @@ Theoretical
     in Semantic Representation](/articles/Griffiths2007.pdf).
     *Psychological Review, 114*(2), 211-244.
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
-    Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
-    *Journal of Statistical, 40*(13), 1-30.
--   Mimno, D. & A. Mccallum. (2007). [Organizing the OCA: learning faceted 
-    subjects from a library of digital books](/articles/Mimno2007.pdf). In 
-    *Joint Conference on Digital Libraries*. ACM Press, New York, NY, 376–385.
+    Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of
+    Statistical Software, 40*(13), 1-30.
+-   Mimno, D. & A. Mccallum. (2007). [Organizing the OCA: learning
+    faceted subjects from a library of digital
+    books](/articles/Mimno2007.pdf). In *Joint Conference on Digital
+    Libraries*. ACM Press, New York, NY, 376â€“385.
 -   Ponweiser, M. (2012). [Latent Dirichlet Allocation in R (Diploma
     Thesis)](/articles/Ponweiser2012.pdf). Vienna University of
     Economics and Business, Vienna
@@ -179,9 +180,9 @@ Theoretical
 -   Roberts, M., Stewart, B., Tingley, D. (n.d.). [stm: R Package for
     Structural Topic Models](/articles/Robertsnd.pdf), 1-49.
 -   Sievert, C. & Shirley, K. E. (2014a). [LDAvis: A Method for
-    Visualizing and Interpreting Topics.](Sievert2014a.pdf) *Proceedings
-    of the Workshop on Interactive Language Learning, Visualization, and
-    Interfaces* 63-70.
+    Visualizing and Interpreting Topics.](/articles/Sievert2014a.pdf) in
+    *Proceedings of the Workshop on Interactive Language Learning,
+    Visualization, and Interfaces* 63-70.
 -   Steyvers, M. & Griffiths, T. (2007). [Probabilistic topic
     models](/articles/Steyvers2007.pdf). In T. Landauer, D McNamara, S.
     Dennis, and W. Kintsch (eds), *Latent Semantic Analysis: A Road to
@@ -190,10 +191,10 @@ Theoretical
     Models](/articles/Taddy2012.pdf) In *Proceedings of the 15th
     International Conference on Artificial Intelligence and Statistics
     (AISTATS 2012)*, 1184-1193.
-- Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding 
-    the limiting factors of topic modeling via posterior contraction 
-    analysis](/articles/Tang2014.pdf). In *31 st International Conference on 
-    Machine Learning*, 190-198.
+-   Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014).
+    [Understanding the limiting factors of topic modeling via posterior
+    contraction analysis](/articles/Tang2014.pdf). In *31 st
+    International Conference on Machine Learning*, 190-198.
 
 Websites & Blogs
 ================
@@ -287,8 +288,8 @@ R Specific References
 -   Chang J. (2010). lda: Collapsed Gibbs Sampling Methods for Topic
     Models. <http://CRAN.R-project.org/package=lda>.
 -   Grüen, B. & Hornik, K. (2011). [topicmodels: An R Package for
-    Fitting Topic Models.Software](/articles/Gruen2011.pdf). 
-    *Journal of Statistical, 40*(13), 1-30.
+    Fitting Topic Models.](/articles/Gruen2011.pdf). *Journal of
+    Statistical Software, 40*(13), 1-30.
 -   Mimno, D. (2013). [vignette-mallet: A wrapper around the Java
     machine learning tool MALLET](/articles/Mimno2013.Rmd).
     <https://CRAN.R-project.org/package=mallet>
@@ -338,24 +339,20 @@ The .R script for this demonstration can be downloaded from
 ### Install/Load Tools & Data
 
     if (!require("pacman")) install.packages("pacman")
-
-    ## Loading required package: pacman
-
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr,  devtools, LDAvis, ggplot2)
 
     ## Source topicmodels2LDAvis & optimal_k functions
     invisible(lapply(
-        file.path("https://gist.githubusercontent.com/trinker", 
-            c(
-                "477d7ae65ff6ca73cace/raw/79dbc9d64b17c3c8befde2436fdeb8ec2124b07b/topicmodels2LDAvis",
-                "e448c14f7dfc668a633b/raw/6976989f561bba13069f4204c47ff0348974573f/optimal_k.R"
-        )),
+        file.path(
+            "https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts", 
+            c("topicmodels2LDAvis.R", "optimal_k.R")
+        ),
         devtools::source_url
     ))
 
-    ## SHA-1 hash of file is f9a066b61c9f992daff3991a3293e18897268598
-    ## SHA-1 hash of file is 736d7d7355b1ae6c23d32ebcd608e0fa00694bfa
+    ## SHA-1 hash of file is 5ac52af21ce36dfe8f529b4fe77568ced9307cf0
+    ## SHA-1 hash of file is caf4f4a04cdfac757c95e4bef76743b50cbee36a
 
     data(presidential_debates_2012)
 
@@ -375,23 +372,38 @@ The .R script for this demonstration can be downloaded from
         gofastr::filter_tf_idf() %>%
         gofastr::filter_documents() 
 
+### Control List
+
+    seed <- 100
+    burnin <- 1000
+    iter <- 1000
+    keep <- 50
+
+    control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
+
 ### Determine Optimal Number of Topics
 
 The plot below shows the harmonic mean of the log likelihoods against k
 (number of topics). It appears the optimal number of topics is ~k = 13.
 
-    optimal_k(doc_term_mat)
+    k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
 
     ## 
     ## Grab a cup of coffee this is gonna take a while...
 
-    ## Optimal number of topics = 13
+    ## 10 of 30 iterations (Time elapsed: .4 mins)
+    ## 20 of 30 iterations (Time elapsed: 1.5 mins)
+    ## 30 of 30 iterations (Time elapsed: 3.3 mins)
+    ## Optimal number of topics = 20
 
-![](inst/figure/unnamed-chunk-5-1.png)
+    k
+
+![](inst/figure/unnamed-chunk-6-1.png)
 
 ### Run the Model
 
-    lda_model <- topicmodels::LDA(doc_term_mat, k = 13, control = list(seed=100))
+    lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 
+        control = control)
 
 ### Plot the Topics Per Person & Time
 
@@ -411,7 +423,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
             ggplot2::guides(fill=FALSE) +
             ggplot2::xlab("Proportion")
 
-![](inst/figure/unnamed-chunk-7-1.png)
+![](inst/figure/unnamed-chunk-8-1.png)
 
 ### LDAvis of Model
 
@@ -431,6 +443,11 @@ here](http://trinker.github.io/LDAvis/example/).
         gofastr::remove_stopwords(stops) %>%                                                    
         gofastr::filter_tf_idf() %>%
         gofastr::filter_documents() 
+
+
+    ## Update Control List
+    control2 <- control
+    control2[["estimate.beta"]] <- FALSE
 
 
     ## Run the Model for New Data
