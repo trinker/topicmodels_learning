@@ -253,6 +253,7 @@ lda_model %>%
     invisible()
 
 file.copy(file.path(temp, "lda.json"), pathr::parse_path(targ) %>% pathr::front())
+pathr::open_path("C:/Users/Tyler/GitHub/trinker.github.com/trinker.github.com.Rproj")
 ```
 
 ### Apply Model to New Data
