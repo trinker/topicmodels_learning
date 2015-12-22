@@ -19,6 +19,7 @@ data(presidential_debates_2012)
 ## Generate Stopwords 
 stops <- c(
         tm::stopwords("english"),
+        tm::stopwords("SMART"),    
         "governor", "president", "mister", "obama","romney"
     ) %>%
     gofastr::prep_stopwords() 

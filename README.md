@@ -352,7 +352,7 @@ The .R script for this demonstration can be downloaded from
     ))
 
     ## SHA-1 hash of file is 5ac52af21ce36dfe8f529b4fe77568ced9307cf0
-    ## SHA-1 hash of file is caf4f4a04cdfac757c95e4bef76743b50cbee36a
+    ## SHA-1 hash of file is e16a1d52f9c27fd5c2379c874e30e5d38b1c9810
 
     data(presidential_debates_2012)
 
@@ -360,6 +360,7 @@ The .R script for this demonstration can be downloaded from
 
     stops <- c(
             tm::stopwords("english"),
+            tm::stopwords("SMART"),
             "governor", "president", "mister", "obama","romney"
         ) %>%
         gofastr::prep_stopwords() 
@@ -391,10 +392,10 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## 
     ## Grab a cup of coffee this is gonna take a while...
 
-    ## 10 of 30 iterations (Time elapsed: .4 mins)
-    ## 20 of 30 iterations (Time elapsed: 1.5 mins)
-    ## 30 of 30 iterations (Time elapsed: 3.3 mins)
-    ## Optimal number of topics = 20
+    ## 10 of 30 iterations (Time elapsed: .3 mins)
+    ## 20 of 30 iterations (Time elapsed: 1.2 mins)
+    ## 30 of 30 iterations (Time elapsed: 2.7 mins)
+    ## Optimal number of topics = 12
 
     k
 
