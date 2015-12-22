@@ -32,12 +32,22 @@ doc_term_mat <- presidential_debates_2012 %>%
     gofastr::filter_tf_idf() %>%
     gofastr::filter_documents() 
 
-## Determine Optimal Number of Topics
-optimal_k(doc_term_mat)
+## Control List
+seed <- 100, 
+burnin <- 4000, 
+iter <- 2000, 
+keep <- 5
+thin <- 500
 
+control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep, thin = thin)
+
+## Determine Optimal Number of Topics
+k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep, thin = thin)
+k
 
 ## Run the Model
-lda_model <- topicmodels::LDA(doc_term_mat, k=18, control = list(seed=100))
+lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 
+    control = control)
 
 
 ## Plot the Topics Per Person & Time
@@ -63,6 +73,7 @@ lda_model %>%
     topicmodels2LDAvis() %>%
     LDAvis::serVis()
 
+
 ##==================##
 ## Fitting New Data ##
 ##==================##
@@ -77,8 +88,11 @@ doc_term_mat2 <- partial_republican_debates_2015 %>%
 
 
 ## Run the Model for New Data
-lda_model2 <- topicmodels::LDA(doc_term_mat2, k = k, model = lda_model, 
-    control = list(seed = 100, estimate.beta = FALSE))
+control2 <- control
+control2[["estimate.beta"]] <- FALSE
+
+lda_model2 <- topicmodels::LDA(doc_term_mat2, k = as.numeric(k), model = lda_model, 
+    control = control2)
 
 
 ## Plot the Topics Per Person & Location for New Data
