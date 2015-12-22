@@ -369,7 +369,7 @@ The .R script for this demonstration can be downloaded from
 
     doc_term_mat <- presidential_debates_2012 %>%
         with(gofastr::q_dtm_stem(dialogue, paste(person, time, sep = "_"))) %>%           
-        gofastr::remove_stopwords(stops) %>%                                                    
+        gofastr::remove_stopwords(stops, stem=TRUE) %>%                                                    
         gofastr::filter_tf_idf() %>%
         gofastr::filter_documents() 
 
@@ -393,9 +393,9 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## Grab a cup of coffee this is gonna take a while...
 
     ## 10 of 30 iterations (Time elapsed: .3 mins)
-    ## 20 of 30 iterations (Time elapsed: 1.2 mins)
-    ## 30 of 30 iterations (Time elapsed: 2.7 mins)
-    ## Optimal number of topics = 12
+    ## 20 of 30 iterations (Time elapsed: 1.1 mins)
+    ## 30 of 30 iterations (Time elapsed: 2.4 mins)
+    ## Optimal number of topics = 17
 
     k
 
@@ -441,7 +441,7 @@ here](http://trinker.github.io/LDAvis/example/).
     ## Create the DocumentTermMatrix for New Data
     doc_term_mat2 <- partial_republican_debates_2015 %>%
         with(gofastr::q_dtm_stem(dialogue, paste(person, location, sep = "_"))) %>%           
-        gofastr::remove_stopwords(stops) %>%                                                    
+        gofastr::remove_stopwords(stops, stem=TRUE) %>%                                                    
         gofastr::filter_tf_idf() %>%
         gofastr::filter_documents() 
 

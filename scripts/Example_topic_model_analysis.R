@@ -28,7 +28,7 @@ stops <- c(
 ## Create the DocumentTermMatrix
 doc_term_mat <- presidential_debates_2012 %>%
     with(gofastr::q_dtm_stem(dialogue, paste(person, time, sep = "_"))) %>%           
-    gofastr::remove_stopwords(stops) %>%                                                    
+    gofastr::remove_stopwords(stops, stem=TRUE) %>%                                                    
     gofastr::filter_tf_idf() %>%
     gofastr::filter_documents() 
 
@@ -84,7 +84,7 @@ lda_model %>%
 ## Create the DocumentTermMatrix for New Data
 doc_term_mat2 <- partial_republican_debates_2015 %>%
     with(gofastr::q_dtm_stem(dialogue, paste(person, location, sep = "_"))) %>%           
-    gofastr::remove_stopwords(stops) %>%                                                    
+    gofastr::remove_stopwords(stops, stem=TRUE) %>%                                                    
     gofastr::filter_tf_idf() %>%
     gofastr::filter_documents() 
 
