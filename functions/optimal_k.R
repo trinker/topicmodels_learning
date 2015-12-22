@@ -168,7 +168,7 @@ optimal_k2 <- function(x, ...){
             elapsed <- gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
             cat(sprintf("%s of %s iterations (Time elapsed: %s mins)\n", k, max.k, elapsed)); flush.console()
         }
-        topicmodels::LDA(x, k = k, ...))
+        topicmodels::LDA(x, k = k, ...)
     })
 
     out <- data.frame(
