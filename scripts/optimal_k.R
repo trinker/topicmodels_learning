@@ -90,7 +90,7 @@ plot.optimal_k1 <- function(x, ...){
     y <- y[y[["k"]] == as.numeric(x), ]
 
     ggplot2::ggplot(attributes(x)[["k_dataframe"]], ggplot2::aes_string(x="k", y="harmonic_mean")) + 
-        ggplot2::xlab("Number of Topics") + 
+        ggplot2::xlab(sprintf("Number of Topics (Optimal Number: %s)", as.numeric(x))) + 
         ggplot2::ylab("Harmonic Mean of Log Likelihood") + 
         geom_point(data=y, color="blue", fill=NA,  size = 6, shape = 21) +
         ggplot2::geom_line(size=1) + 
