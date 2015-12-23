@@ -47,7 +47,7 @@ useful.
 
 1.  Boyd-Graber, J. (2013). [Computational Linguistics I: Topic
     Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)  
-2.  Underwood, T. (2012) [Topic Modeling Made Just Simple
+2.  Underwood, T. (2012). [Topic Modeling Made Just Simple
     Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
 3.  Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
     Tour](http://www.scottbot.net/HIAL/?p=19113)
@@ -203,18 +203,18 @@ Websites & Blogs
     Modeling](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 -   Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling
     Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
--   Jones, T. (n.d.) [Topic Models Reading
+-   Jones, T. (n.d.). [Topic Models Reading
     List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
 -   Marwick, B. (2014a). [The input parameters for using latent
     Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
 -   Marwick, B. (2014b). [Topic models: cross validation with
     loglikelihood or
     perplexity](http://stackoverflow.com/a/21394092/1000343)
--   Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the
+-   Schmidt, B.M. (2012). [Words Alone: Dismantling Topic Models in the
     Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
--   Underwood, T. (2012a) [Topic Modeling Made Just Simple
+-   Underwood, T. (2012a). [Topic Modeling Made Just Simple
     Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
--   Underwood, T. (2012b) [What kinds of "topics" does topic modeling
+-   Underwood, T. (2012b). [What kinds of "topics" does topic modeling
     actually
     produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
 -   Weingart, S. (2012). [Topic Modeling for Humanists: A Guided
@@ -375,7 +375,7 @@ The .R script for this demonstration can be downloaded from
 
 ### Control List
 
-    control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
+    control <- list(burnin = 500, iter = 1000, keep = 100)
 
 ### Determine Optimal Number of Topics
 
@@ -387,18 +387,19 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 40 iterations (Current: 02:49:26; Elapsed: .2 mins)
-    ## 20 of 40 iterations (Current: 02:50:01; Elapsed: .8 mins; Remaining: ~2.4 mins)
-    ## 30 of 40 iterations (Current: 02:51:02; Elapsed: 1.8 mins; Remaining: ~1.4 mins)
-    ## 40 of 40 iterations (Current: 02:52:29; Elapsed: 3.3 mins; Remaining: ~0 mins)
-    ## Optimal number of topics = 12
+    ## 10 of 40 iterations (Current: 03:07:59; Elapsed: .2 mins)
+    ## 20 of 40 iterations (Current: 03:08:33; Elapsed: .8 mins; Remaining: ~2.3 mins)
+    ## 30 of 40 iterations (Current: 03:09:35; Elapsed: 1.8 mins; Remaining: ~1.4 mins)
+    ## 40 of 40 iterations (Current: 03:11:06; Elapsed: 3.3 mins; Remaining: ~0 mins)
+    ## Optimal number of topics = 23
 
-![](inst/figure/unnamed-chunk-6-1.png)
+![](inst/figure/unnamed-chunk-7-1.png)
 
-It appears the optimal number of topics is ~k = 12.
+It appears the optimal number of topics is ~k = 23.
 
 ### Run the Model
 
+    control[["seed"]] <- 100
     lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 
         control = control)
 
@@ -420,13 +421,13 @@ It appears the optimal number of topics is ~k = 12.
             ggplot2::guides(fill=FALSE) +
             ggplot2::xlab("Proportion")
 
-![](inst/figure/unnamed-chunk-8-1.png)
+![](inst/figure/unnamed-chunk-9-1.png)
 
 ### Plot the Topics Matrix as a Heatmap
 
     heatmap(topics, scale = "none")
 
-![](inst/figure/unnamed-chunk-9-1.png)
+![](inst/figure/unnamed-chunk-10-1.png)
 
 ### Network of the Word Distributions Over Topics (Topic Relation)
 
@@ -450,7 +451,7 @@ It appears the optimal number of topics is ~k = 12.
         vertex.frame.color = NA, vertex.label.color = "grey30")
     title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
 
-![](inst/figure/unnamed-chunk-10-1.png)
+![](inst/figure/unnamed-chunk-11-1.png)
 
 ### Network of the Topics Over Dcouments (Topic Relation)
 
@@ -469,12 +470,12 @@ It appears the optimal number of topics is ~k = 12.
     V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
 
     par(mar=c(0, 0, 3, 0))
-    set.seed(365)
+    set.seed(369)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
         vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
     title("Topic & Document Relationships", cex.main=.8)
 
-![](inst/figure/unnamed-chunk-11-1.png)
+![](inst/figure/unnamed-chunk-12-1.png)
 
 ### LDAvis of Model
 

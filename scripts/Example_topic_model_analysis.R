@@ -34,13 +34,14 @@ doc_term_mat <- presidential_debates_2012 %>%
 
 
 ## Control List
-control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
+control <- list(burnin = 500, iter = 1000, keep = 100)
 
 ## Determine Optimal Number of Topics
 (k <- optimal_k(doc_term_mat, 40, control = control))
 
 
 ## Run the Model
+control[["seed"]] <- 100
 lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 
     control = control)
 

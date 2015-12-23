@@ -27,7 +27,7 @@ This is a collection documenting the resources I find related to topic models wi
 This is my run down of the minimal readings, websites, videos, & scripts the reader needs to become familiar with topic modeling.  The list is in an order I believe will be of greatest use and contains a nice mix of introduction, theory, application, and interpretation.  As you want to learn more about topic modeling, the other sections will become more useful.
 
 1. Boyd-Graber, J. (2013). [Computational Linguistics I: Topic Modeling](https://www.youtube.com/watch?v=4p9MSJy761Y)    
-2. Underwood, T. (2012) [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
+2. Underwood, T. (2012). [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
 3. Weingart, S. (2012). [Topic Modeling for Humanists: A Guided Tour](http://www.scottbot.net/HIAL/?p=19113)
 4. Blei, D. M. (2012). [Probabilistic topic models](/articles/Blei2012.pdf). *Communications of the ACM, (55)*4, 77-84. doi:10.1145/2133806.2133826    
 5. inkhorn82 (2014). [A Delicious Analysis! (aka topic modelling using recipes)](http://rforwork.info/2014/02/17/a-delicious-analysis/) [(CODE)](https://gist.githubusercontent.com/inkhorn/9044779/raw/c7f0ba30d424aaeb75c5e221d12566f6732c4f29/recipe%20analysis.R)
@@ -92,12 +92,12 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 
 - Blei, D. (n.d.). [Topic Modeling](https://www.cs.princeton.edu/~blei/topicmodeling.html)
 - Jockers, M.L. (2013). ["Secret" Recipe for Topic Modeling Themes](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/)
-- Jones, T. (n.d.) [Topic Models Reading List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
+- Jones, T. (n.d.). [Topic Models Reading List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
 - Marwick, B. (2014a). [The input parameters for using latent Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
 - Marwick, B. (2014b). [Topic models: cross validation with loglikelihood or perplexity](http://stackoverflow.com/a/21394092/1000343)
-- Schmidt, B.M. (2012) [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
-- Underwood, T. (2012a) [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
-- Underwood, T. (2012b) [What kinds of "topics" does topic modeling actually produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
+- Schmidt, B.M. (2012). [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
+- Underwood, T. (2012a). [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
+- Underwood, T. (2012b). [What kinds of "topics" does topic modeling actually produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)
 - Weingart, S. (2012). [Topic Modeling for Humanists: A Guided Tour](http://www.scottbot.net/HIAL/?p=19113)
 - Weingart, S. (2011). [Topic Modeling and Network Analysis](http://www.scottbot.net/HIAL/?p=221)
 
@@ -189,7 +189,11 @@ doc_term_mat <- presidential_debates_2012 %>%
 ### Control List
 
 ```{r}
-control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
+control <- list(burnin = 500, iter = 1000, keep = 100)
+```
+
+```{r, echo=FALSE, results="hide"}
+control[["seed"]] <- 200
 ```
 
 ### Determine Optimal Number of Topics
@@ -205,6 +209,7 @@ It appears the optimal number of topics is ~k = `r as.numeric(k)`.
 ### Run the Model
 
 ```{r}
+control[["seed"]] <- 100
 lda_model <- topicmodels::LDA(doc_term_mat, k=as.numeric(k), method = "Gibbs", 
     control = control)
 ```
@@ -279,7 +284,7 @@ V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
 V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
 
 par(mar=c(0, 0, 3, 0))
-set.seed(365)
+set.seed(369)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
 title("Topic & Document Relationships", cex.main=.8)
