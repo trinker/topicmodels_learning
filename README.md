@@ -352,7 +352,7 @@ The .R script for this demonstration can be downloaded from
     ))
 
     ## SHA-1 hash of file is 5ac52af21ce36dfe8f529b4fe77568ced9307cf0
-    ## SHA-1 hash of file is 81ded97c46b65cbbddd531ea9150088fccfc1b85
+    ## SHA-1 hash of file is df83e0293c60b009fdb06ac89a84af891c13bcb6
 
     data(presidential_debates_2012)
 
@@ -390,11 +390,11 @@ The plot below shows the harmonic mean of the log likelihoods against k
     k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
 
     ## 
-    ## Grab a cup of coffee this is gonna take a while...
+    ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 30 iterations (Time elapsed: .2 mins)
-    ## 20 of 30 iterations (Time elapsed: 1.1 mins)
-    ## 30 of 30 iterations (Time elapsed: 2.5 mins)
+    ## 10 of 30 iterations (Current: 11:21:01; Elapsed: .3 mins)
+    ## 20 of 30 iterations (Current: 11:21:51; Elapsed: 1.1 mins; Remaining: ~1.4 mins)
+    ## 30 of 30 iterations (Current: 11:23:13; Elapsed: 2.4 mins; Remaining: ~0 mins)
     ## Optimal number of topics = 18
 
     k
@@ -479,6 +479,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
     set.seed(119)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
         vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
+    title("Topic/Document Relationships", cex.main=.8)
 
 ![](inst/figure/unnamed-chunk-11-1.png)
 
