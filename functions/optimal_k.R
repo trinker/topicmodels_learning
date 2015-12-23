@@ -72,9 +72,9 @@ optimal_k <- function(x, max.k = 30, harmonic.mean = TRUE,
     method = if (harmonic.mean) "Gibbs" else "VEM", verbose = TRUE, ...){
 
     if (isTRUE(harmonic.mean)) {
-        optimal_k1(x, max.k = max.k, burnin = burnin, iter = iter, keep = keep, method = method, verbose = verbose, ...)
+        optimal_k1(x, max.k = max.k, control = control, method = method, verbose = verbose, ...)
     } else {
-        optimal_k2(x, max.k = max.k, ...)
+        optimal_k2(x, max.k = max.k, control = control, method = method, ...)
     }
 }
 
@@ -153,6 +153,9 @@ optimal_k1 <- function(x, max.k = 30,
             #gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
             cat(sprintf("%s of %s iterations (Current: %s; Elapsed: %s mins%s)\n", k, max.k, cur, elapsed, est)); flush.console()
         }
+        burnin <- control[["burnin"]]
+        keep <- control[["keep"]]
+        if (is.null(burnin) | is.null(keep)) stop("Supply burnin & keep to control")
         fitted <- topicmodels::LDA(x, k = k, method = method, control = control)
         logLiks <- fitted@logLiks[-c(1:(burnin/keep))]
         harmonicMean(logLiks)
