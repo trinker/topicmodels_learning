@@ -197,7 +197,7 @@ control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
 The plot below shows the harmonic mean of the log likelihoods against k (number of topics).  
 
 ```{r}
-(k <- optimal_k(doc_term_mat, control = control))
+(k <- optimal_k(doc_term_mat, 40, control = control))
 ```
 
 It appears the optimal number of topics is ~k = `r as.numeric(k)`.

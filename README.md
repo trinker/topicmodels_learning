@@ -339,9 +339,6 @@ The .R script for this demonstration can be downloaded from
 ### Install/Load Tools & Data
 
     if (!require("pacman")) install.packages("pacman")
-
-    ## Loading required package: pacman
-
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr, igraph, devtools, LDAvis, ggplot2)
 
@@ -385,14 +382,15 @@ The .R script for this demonstration can be downloaded from
 The plot below shows the harmonic mean of the log likelihoods against k
 (number of topics).
 
-    (k <- optimal_k(doc_term_mat, control = control))
+    (k <- optimal_k(doc_term_mat, 40, control = control))
 
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 30 iterations (Current: 02:45:47; Elapsed: .2 mins)
-    ## 20 of 30 iterations (Current: 02:46:26; Elapsed: .8 mins; Remaining: ~1.1 mins)
-    ## 30 of 30 iterations (Current: 02:47:25; Elapsed: 1.8 mins; Remaining: ~0 mins)
+    ## 10 of 40 iterations (Current: 02:49:26; Elapsed: .2 mins)
+    ## 20 of 40 iterations (Current: 02:50:01; Elapsed: .8 mins; Remaining: ~2.4 mins)
+    ## 30 of 40 iterations (Current: 02:51:02; Elapsed: 1.8 mins; Remaining: ~1.4 mins)
+    ## 40 of 40 iterations (Current: 02:52:29; Elapsed: 3.3 mins; Remaining: ~0 mins)
     ## Optimal number of topics = 12
 
 ![](inst/figure/unnamed-chunk-6-1.png)
