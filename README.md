@@ -392,16 +392,16 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 30 iterations (Current: 12:19:03; Elapsed: .3 mins)
-    ## 20 of 30 iterations (Current: 12:19:53; Elapsed: 1.1 mins; Remaining: ~1.4 mins)
-    ## 30 of 30 iterations (Current: 12:21:20; Elapsed: 2.6 mins; Remaining: ~0 mins)
-    ## Optimal number of topics = 18
+    ## 10 of 30 iterations (Current: 01:49:17; Elapsed: .3 mins)
+    ## 20 of 30 iterations (Current: 01:50:05; Elapsed: 1 mins; Remaining: ~1.3 mins)
+    ## 30 of 30 iterations (Current: 01:51:21; Elapsed: 2.3 mins; Remaining: ~0 mins)
+    ## Optimal number of topics = 22
 
     k
 
 ![](inst/figure/unnamed-chunk-6-1.png)
 
-It appears the optimal number of topics is ~k = 18.
+It appears the optimal number of topics is ~k = 22.
 
 ### Run the Model
 
@@ -445,18 +445,15 @@ It appears the optimal number of topics is ~k = 18.
     graph <- graph.adjacency(cor_mat, weighted=TRUE, mode="lower")
     graph <- delete.edges(graph, E(graph)[ weight < 0.05])
 
-    E(graph)$edge.width <- E(graph)$weight*10
-    E(graph)$color <- "blue"
-    V(graph)$color <- "grey75"
-    V(graph)$frame.color <- "grey85"
+    E(graph)$edge.width <- E(graph)$weight*20
     V(graph)$label <- paste("Topic", V(graph))
-    V(graph)$label.color <- "grey30"
-    V(graph)$size <- colSums(post[["topics"]]) * 20
+    V(graph)$size <- colSums(post[["topics"]]) * 15
 
     par(mar=c(0, 0, 3, 0))
     set.seed(110)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
-        vertex.color = adjustcolor("black", alpha.f = .2))
+        edge.color = "orange", vertex.color = "orange", 
+        vertex.frame.color = NA, vertex.label.color = "grey30")
     title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
 
 ![](inst/figure/unnamed-chunk-10-1.png)
@@ -473,12 +470,12 @@ It appears the optimal number of topics is ~k = 18.
     E(graph)$color <- "blue"
     V(graph)$color <- ifelse(grepl("^\\d+$", V(graph)$name), "grey75", "orange")
     V(graph)$frame.color <- NA
-    V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), V(graph)$name)
+    V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), gsub("_", "\n", V(graph)$name))
     V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
     V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
 
     par(mar=c(0, 0, 3, 0))
-    set.seed(119)
+    set.seed(365)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
         vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
     title("Topic & Document Relationships", cex.main=.8)

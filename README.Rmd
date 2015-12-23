@@ -254,18 +254,15 @@ diag(cor_mat) <- 0
 graph <- graph.adjacency(cor_mat, weighted=TRUE, mode="lower")
 graph <- delete.edges(graph, E(graph)[ weight < 0.05])
 
-E(graph)$edge.width <- E(graph)$weight*10
-E(graph)$color <- "blue"
-V(graph)$color <- "grey75"
-V(graph)$frame.color <- "grey85"
+E(graph)$edge.width <- E(graph)$weight*20
 V(graph)$label <- paste("Topic", V(graph))
-V(graph)$label.color <- "grey30"
-V(graph)$size <- colSums(post[["topics"]]) * 20
+V(graph)$size <- colSums(post[["topics"]]) * 15
 
 par(mar=c(0, 0, 3, 0))
 set.seed(110)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
-    vertex.color = adjustcolor("black", alpha.f = .2))
+    edge.color = "orange", vertex.color = "orange", 
+    vertex.frame.color = NA, vertex.label.color = "grey30")
 title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
 ```
 
@@ -283,12 +280,12 @@ E(graph)$edge.width <- E(graph)$weight*17
 E(graph)$color <- "blue"
 V(graph)$color <- ifelse(grepl("^\\d+$", V(graph)$name), "grey75", "orange")
 V(graph)$frame.color <- NA
-V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), V(graph)$name)
+V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), gsub("_", "\n", V(graph)$name))
 V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
 V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
 
 par(mar=c(0, 0, 3, 0))
-set.seed(119)
+set.seed(365)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
 title("Topic & Document Relationships", cex.main=.8)
