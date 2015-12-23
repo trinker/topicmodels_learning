@@ -92,7 +92,7 @@ V(graph)$label <- paste("Topic", V(graph))
 V(graph)$label.color <- "grey30"
 V(graph)$size <- colSums(post[["topics"]]) * 20
 
-par(mar=c(0, 0, 3,0))
+par(mar=c(0, 0, 3, 0))
 set.seed(110)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor("black", alpha.f = .2))
@@ -114,7 +114,7 @@ V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)
 V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
 V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
 
-par(mar=c(0, 0, 0,0))
+par(mar=c(0, 0, 3, 0))
 set.seed(119)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))

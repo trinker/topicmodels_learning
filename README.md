@@ -385,21 +385,23 @@ The .R script for this demonstration can be downloaded from
 ### Determine Optimal Number of Topics
 
 The plot below shows the harmonic mean of the log likelihoods against k
-(number of topics). It appears the optimal number of topics is ~k = 13.
+(number of topics).
 
     k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
 
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 30 iterations (Current: 11:21:01; Elapsed: .3 mins)
-    ## 20 of 30 iterations (Current: 11:21:51; Elapsed: 1.1 mins; Remaining: ~1.4 mins)
-    ## 30 of 30 iterations (Current: 11:23:13; Elapsed: 2.4 mins; Remaining: ~0 mins)
+    ## 10 of 30 iterations (Current: 11:59:45; Elapsed: .3 mins)
+    ## 20 of 30 iterations (Current: 12:00:37; Elapsed: 1.1 mins; Remaining: ~1.4 mins)
+    ## 30 of 30 iterations (Current: 12:01:57; Elapsed: 2.4 mins; Remaining: ~0 mins)
     ## Optimal number of topics = 18
 
     k
 
 ![](inst/figure/unnamed-chunk-6-1.png)
+
+It appears the optimal number of topics is ~k = 18.
 
 ### Run the Model
 
@@ -451,7 +453,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
     V(graph)$label.color <- "grey30"
     V(graph)$size <- colSums(post[["topics"]]) * 20
 
-    par(mar=c(0, 0, 3,0))
+    par(mar=c(0, 0, 3, 0))
     set.seed(110)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
         vertex.color = adjustcolor("black", alpha.f = .2))
@@ -475,7 +477,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
     V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
     V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
 
-    par(mar=c(0, 0, 0,0))
+    par(mar=c(0, 0, 3, 0))
     set.seed(119)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
         vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
