@@ -267,6 +267,31 @@ plot.igraph(graph, edge.width = E(graph)$edge.width,
 title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
 ```
 
+
+### Network of the Topics Over Dcouments (Topic Relation)
+
+```{r}
+minval <- .1
+topic_mat <- topicmodels::posterior(lda_model)[["topics"]]
+
+graph <- graph_from_incidence_matrix(topic_mat, weighted=TRUE)
+graph <- delete.edges(graph, E(graph)[ weight < minval])
+
+E(graph)$edge.width <- E(graph)$weight*17
+E(graph)$color <- "blue"
+V(graph)$color <- ifelse(grepl("^\\d+$", V(graph)$name), "grey75", "orange")
+V(graph)$frame.color <- NA
+V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), V(graph)$name)
+V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
+V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
+
+par(mar=c(0, 0, 0,0))
+set.seed(119)
+plot.igraph(graph, edge.width = E(graph)$edge.width, 
+    vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
+```
+
+
 ### LDAvis of Model
 
 The output from **LDAvis** is not easily embedded within an R markdown document, however, the reader may [see the results here](http://trinker.github.io/LDAvis/example/).

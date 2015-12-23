@@ -68,13 +68,13 @@ tidyr::gather(topic_dat, Topic, Proportion, -c(Person_Time)) %>%
         ggplot2::facet_grid(Person~Time) +
         ggplot2::guides(fill=FALSE) +
         ggplot2::xlab("Proportion")
-terms(lda_model, 10)
 
-### Plot the Topics Matrix as a Heatmap 
+
+## Plot the Topics Matrix as a Heatmap 
 heatmap(topics, scale = "none")
 
-### Network of the Word Distributions Over Topics
 
+## Network of the Word Distributions Over Topics
 post <- topicmodels::posterior(lda_model)
 
 cor_mat <- cor(t(post[["terms"]]))
@@ -97,6 +97,28 @@ set.seed(110)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor("black", alpha.f = .2))
 title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
+
+
+## Network of the Topics Over Documents
+minval <- .1
+topic_mat <- topicmodels::posterior(lda_model)[["topics"]]
+
+graph <- graph_from_incidence_matrix(topic_mat, weighted=TRUE)
+graph <- delete.edges(graph, E(graph)[ weight < minval])
+
+E(graph)$edge.width <- E(graph)$weight*17
+E(graph)$color <- "blue"
+V(graph)$color <- ifelse(grepl("^\\d+$", V(graph)$name), "grey75", "orange")
+V(graph)$frame.color <- NA
+V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), V(graph)$name)
+V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
+V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
+
+par(mar=c(0, 0, 0,0))
+set.seed(119)
+plot.igraph(graph, edge.width = E(graph)$edge.width, 
+    vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
+
 
 ## LDAvis of Model
 lda_model %>%

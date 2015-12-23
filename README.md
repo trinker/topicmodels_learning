@@ -352,7 +352,7 @@ The .R script for this demonstration can be downloaded from
     ))
 
     ## SHA-1 hash of file is 5ac52af21ce36dfe8f529b4fe77568ced9307cf0
-    ## SHA-1 hash of file is e16a1d52f9c27fd5c2379c874e30e5d38b1c9810
+    ## SHA-1 hash of file is 81ded97c46b65cbbddd531ea9150088fccfc1b85
 
     data(presidential_debates_2012)
 
@@ -392,10 +392,10 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## 
     ## Grab a cup of coffee this is gonna take a while...
 
-    ## 10 of 30 iterations (Time elapsed: .3 mins)
-    ## 20 of 30 iterations (Time elapsed: 1.2 mins)
-    ## 30 of 30 iterations (Time elapsed: 2.6 mins)
-    ## Optimal number of topics = 15
+    ## 10 of 30 iterations (Time elapsed: .2 mins)
+    ## 20 of 30 iterations (Time elapsed: 1.1 mins)
+    ## 30 of 30 iterations (Time elapsed: 2.5 mins)
+    ## Optimal number of topics = 18
 
     k
 
@@ -432,7 +432,7 @@ The plot below shows the harmonic mean of the log likelihoods against k
 
 ![](inst/figure/unnamed-chunk-9-1.png)
 
-### Network of the Word Distributions Over Topics  (Topic Relation)
+### Network of the Word Distributions Over Topics (Topic Relation)
 
     post <- topicmodels::posterior(lda_model)
 
@@ -458,6 +458,29 @@ The plot below shows the harmonic mean of the log likelihoods against k
     title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
 
 ![](inst/figure/unnamed-chunk-10-1.png)
+
+### Network of the Topics Over Dcouments (Topic Relation)
+
+    minval <- .1
+    topic_mat <- topicmodels::posterior(lda_model)[["topics"]]
+
+    graph <- graph_from_incidence_matrix(topic_mat, weighted=TRUE)
+    graph <- delete.edges(graph, E(graph)[ weight < minval])
+
+    E(graph)$edge.width <- E(graph)$weight*17
+    E(graph)$color <- "blue"
+    V(graph)$color <- ifelse(grepl("^\\d+$", V(graph)$name), "grey75", "orange")
+    V(graph)$frame.color <- NA
+    V(graph)$label <- ifelse(grepl("^\\d+$", V(graph)$name), paste("topic", V(graph)$name), V(graph)$name)
+    V(graph)$size <- c(rep(10, nrow(topic_mat)), colSums(topic_mat) * 20)
+    V(graph)$label.color <- ifelse(grepl("^\\d+$", V(graph)$name), "red", "grey30")
+
+    par(mar=c(0, 0, 0,0))
+    set.seed(119)
+    plot.igraph(graph, edge.width = E(graph)$edge.width, 
+        vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
+
+![](inst/figure/unnamed-chunk-11-1.png)
 
 ### LDAvis of Model
 

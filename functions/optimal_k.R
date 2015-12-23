@@ -122,16 +122,31 @@ optimal_k1 <- function(x, max.k = 30, burnin = 1000, iter = 1000, keep = 50, met
 
 
     if (max.k > 20) {
-        message("\nGrab a cup of coffee this is gonna take a while...\n")
+        message("\nGrab a cup of coffee this could take a while...\n")
         flush.console()
     }
 
     tic <- Sys.time()
-
+    v <- rep(NA, floor(max.k/10))
+    dat <- data.frame(k = v, time = v)
+    end <- data.frame(k = max.k^2)
+    
     hm_many <- sapply(2:max.k, function(k){
         if (k %% 10 == 0){
-            elapsed <- gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
-            cat(sprintf("%s of %s iterations (Time elapsed: %s mins)\n", k, max.k, elapsed)); flush.console()
+            time <- as.numeric(difftime(Sys.time(), tic, units = "mins"))        
+            dat[k/10, 1:2] <<- c(k^2, time)          
+            if (k/10 > 1) {
+                fit <- with(dat, lm(time~k))
+                pred <- predict(fit, end) - time
+                if (pred < 0) pred <- 0
+                est <- paste0("; Remaining: ~", time2char(pred), " mins")
+            } else {
+                est <- ""
+            }
+            cur <- format(Sys.time(), format="%I:%M:%S")
+            elapsed <- time2char(time)
+            #gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
+            cat(sprintf("%s of %s iterations (Current: %s; Elapsed: %s mins%s)\n", k, max.k, cur, elapsed, est)); flush.console()
         }
         fitted <- topicmodels::LDA(x, k = k, method = method, control = list(burnin = burnin, iter = iter, keep = keep, ...))
         logLiks <- fitted@logLiks[-c(1:(burnin/keep))]
@@ -154,19 +169,32 @@ harmonicMean <- function(logLikelihoods, precision=2000L) {
     as.double(llMed - log(Rmpfr::mean(exp(-Rmpfr::mpfr(logLikelihoods, prec = precision) + llMed))))
 }
 
-optimal_k2 <- function(x, ...){
+optimal_k2 <- function(x, max.k = 30, ...){
 
     if (max.k > 20) {
-        message("\nGrab a cup of coffee this is gonna take a while...\n")
+        message("\nGrab a cup of coffee this could take a while...\n")
         flush.console()
     }
 
     tic <- Sys.time()
-
+    v <- rep(NA, floor(max.k/10))
+    dat <- data.frame(k = v, time = v)
+    end <- data.frame(k = max.k^2)
+    
     best_model <- lapply(seq(2, max.k, by=1), function(k){
         if (k %% 10 == 0){
-            elapsed <- gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
-            cat(sprintf("%s of %s iterations (Time elapsed: %s mins)\n", k, max.k, elapsed)); flush.console()
+            time <- as.numeric(difftime(Sys.time(), tic, units = "mins"))        
+            dat[k/10, 1:2] <<- c(k^2, time)            
+            if (k/10 > 1) {
+                fit <- with(dat, lm(time~k))
+                est <- paste0("; Remaining: ~", time2char(predict(fit, end) - time), " mins")
+            } else {
+                est <- ""
+            }
+            cur <- format(Sys.time(), format="%I:%M:%S")
+            elapsed <- time2char(time)
+            #gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
+            cat(sprintf("%s of %s iterations (Current: %s; Elapsed: %s mins%s)\n", k, max.k, cur, elapsed, est)); flush.console()
         }
         topicmodels::LDA(x, k = k, ...)
     })
@@ -178,6 +206,12 @@ optimal_k2 <- function(x, ...){
 
     class(out) <- c("optimal_k", "optimal_k2", "data.frame")
     out
+}
+
+time2char <- function(x){
+    x <- as.character(round(x, 1))
+    if (identical("0", x)) return(x)
+    gsub("^0+", "", x)
 }
 
 #' Plots a plot.optimal_k2 Object
