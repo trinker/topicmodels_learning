@@ -68,7 +68,7 @@
 #' opti_k2 <- optimal_k(doc_term_mat, harmonic.mean = FALSE)
 #' opti_k2
 optimal_k <- function(x, max.k = 30, harmonic.mean = TRUE, 
-    control = if (harmonic.mean) list(burnin = 500, iter = 2000, keep = 100) else  NULL,
+    control = if (harmonic.mean) list(burnin = 500, iter = 1000, keep = 100) else  NULL,
     method = if (harmonic.mean) "Gibbs" else "VEM", verbose = TRUE, ...){
 
     if (isTRUE(harmonic.mean)) {
@@ -122,7 +122,7 @@ print.optimal_k <- function(x, ...){
 
 
 optimal_k1 <- function(x, max.k = 30, 
-    control = list(burnin = 500, iter = 2000, keep = 100), method = "Gibbs", 
+    control = list(burnin = 500, iter = 1000, keep = 100), method = "Gibbs", 
     verbose = TRUE, ...){
 
 
