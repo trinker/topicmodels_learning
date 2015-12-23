@@ -392,9 +392,9 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 30 iterations (Current: 11:59:45; Elapsed: .3 mins)
-    ## 20 of 30 iterations (Current: 12:00:37; Elapsed: 1.1 mins; Remaining: ~1.4 mins)
-    ## 30 of 30 iterations (Current: 12:01:57; Elapsed: 2.4 mins; Remaining: ~0 mins)
+    ## 10 of 30 iterations (Current: 12:19:03; Elapsed: .3 mins)
+    ## 20 of 30 iterations (Current: 12:19:53; Elapsed: 1.1 mins; Remaining: ~1.4 mins)
+    ## 30 of 30 iterations (Current: 12:21:20; Elapsed: 2.6 mins; Remaining: ~0 mins)
     ## Optimal number of topics = 18
 
     k
@@ -481,7 +481,7 @@ It appears the optimal number of topics is ~k = 18.
     set.seed(119)
     plot.igraph(graph, edge.width = E(graph)$edge.width, 
         vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
-    title("Topic/Document Relationships", cex.main=.8)
+    title("Topic & Document Relationships", cex.main=.8)
 
 ![](inst/figure/unnamed-chunk-11-1.png)
 

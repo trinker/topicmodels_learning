@@ -272,7 +272,7 @@ title("Strength Between Topics Based On Word Probabilities", cex.main=.8)
 
 ### Network of the Topics Over Dcouments (Topic Relation)
 
-```{r}
+```{r, fig.width=8, fig.height=8}
 minval <- .1
 topic_mat <- topicmodels::posterior(lda_model)[["topics"]]
 
@@ -291,7 +291,7 @@ par(mar=c(0, 0, 3, 0))
 set.seed(119)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
-title("Topic/Document Relationships", cex.main=.8)
+title("Topic & Document Relationships", cex.main=.8)
 ```
 
 

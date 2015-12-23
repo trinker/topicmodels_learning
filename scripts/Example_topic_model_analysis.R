@@ -118,7 +118,7 @@ par(mar=c(0, 0, 3, 0))
 set.seed(119)
 plot.igraph(graph, edge.width = E(graph)$edge.width, 
     vertex.color = adjustcolor(V(graph)$color, alpha.f = .4))
-title("Topic/Document Relationships", cex.main=.8)
+title("Topic & Document Relationships", cex.main=.8)
 
 
 ## LDAvis of Model
