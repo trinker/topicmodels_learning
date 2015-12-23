@@ -67,7 +67,9 @@
 #'
 #' opti_k2 <- optimal_k(doc_term_mat, harmonic.mean = FALSE)
 #' opti_k2
-optimal_k <- function(x, max.k = 30, harmonic.mean = TRUE, burnin = 1000, iter = 1000, keep = 50, method = "Gibbs", verbose = TRUE, ...){
+optimal_k <- function(x, max.k = 30, harmonic.mean = TRUE, 
+    control = if (harmonic.mean) list(burnin = 500, iter = 2000, keep = 100) else  NULL,
+    method = if (harmonic.mean) "Gibbs" else "VEM", verbose = TRUE, ...){
 
     if (isTRUE(harmonic.mean)) {
         optimal_k1(x, max.k = max.k, burnin = burnin, iter = iter, keep = keep, method = method, verbose = verbose, ...)
@@ -92,13 +94,14 @@ plot.optimal_k1 <- function(x, ...){
     ggplot2::ggplot(attributes(x)[["k_dataframe"]], ggplot2::aes_string(x="k", y="harmonic_mean")) + 
         ggplot2::xlab(sprintf("Number of Topics (Optimal Number: %s)", as.numeric(x))) + 
         ggplot2::ylab("Harmonic Mean of Log Likelihood") + 
-        geom_point(data=y, color="blue", fill=NA,  size = 6, shape = 21) +
+        ggplot2::geom_smooth(method = "loess", fill=NA) + 
+        geom_point(data=y, color="red", fill=NA, size = 6, shape = 21) +
         ggplot2::geom_line(size=1) + 
         ggplot2::theme_bw()  + 
         ggplot2::theme(
             axis.title.x = ggplot2::element_text(vjust = -0.25, size = 14),
             axis.title.y = ggplot2::element_text(size = 14, angle=90)
-        )
+        ) 
 }
 
 #' Prints a optimal_k Object
@@ -118,7 +121,9 @@ print.optimal_k <- function(x, ...){
 
 
 
-optimal_k1 <- function(x, max.k = 30, burnin = 1000, iter = 1000, keep = 50, method = "Gibbs", verbose = TRUE, ...){
+optimal_k1 <- function(x, max.k = 30, 
+    control = list(burnin = 500, iter = 2000, keep = 100), method = "Gibbs", 
+    verbose = TRUE, ...){
 
 
     if (max.k > 20) {
@@ -148,7 +153,7 @@ optimal_k1 <- function(x, max.k = 30, burnin = 1000, iter = 1000, keep = 50, met
             #gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
             cat(sprintf("%s of %s iterations (Current: %s; Elapsed: %s mins%s)\n", k, max.k, cur, elapsed, est)); flush.console()
         }
-        fitted <- topicmodels::LDA(x, k = k, method = method, control = list(burnin = burnin, iter = iter, keep = keep, ...))
+        fitted <- topicmodels::LDA(x, k = k, method = method, control = control)
         logLiks <- fitted@logLiks[-c(1:(burnin/keep))]
         harmonicMean(logLiks)
     })
@@ -169,7 +174,7 @@ harmonicMean <- function(logLikelihoods, precision=2000L) {
     as.double(llMed - log(Rmpfr::mean(exp(-Rmpfr::mpfr(logLikelihoods, prec = precision) + llMed))))
 }
 
-optimal_k2 <- function(x, max.k = 30, ...){
+optimal_k2 <- function(x, max.k = 30, control = NULL, method = "VEM", ...){
 
     if (max.k > 20) {
         message("\nGrab a cup of coffee this could take a while...\n")
@@ -196,7 +201,7 @@ optimal_k2 <- function(x, max.k = 30, ...){
             #gsub("^0+", "", as.character(round(as.numeric(difftime(Sys.time(), tic, units = "mins")), 1)))
             cat(sprintf("%s of %s iterations (Current: %s; Elapsed: %s mins%s)\n", k, max.k, cur, elapsed, est)); flush.console()
         }
-        topicmodels::LDA(x, k = k, ...)
+        topicmodels::LDA(x, k = k, method = method, control = control, ...)
     })
 
     out <- data.frame(
@@ -227,7 +232,7 @@ plot.optimal_k2 <- function(x, ...){
     ggplot2::ggplot(x, ggplot2::aes_string(x="k", y="logLik")) + 
         ggplot2::xlab("Number of Topics") + 
         ggplot2::ylab("Log Likelihood") + 
-        ggplot2::geom_smooth(size=.8, se=FALSE) + 
+        ggplot2::geom_smooth(size=.8, se=FALSE, method="loess") + 
         ggplot2::geom_line(size=1) + 
         ggplot2::theme_bw()  + 
         ggplot2::theme(
