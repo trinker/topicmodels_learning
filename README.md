@@ -339,6 +339,9 @@ The .R script for this demonstration can be downloaded from
 ### Install/Load Tools & Data
 
     if (!require("pacman")) install.packages("pacman")
+
+    ## Loading required package: pacman
+
     pacman::p_load_gh("trinker/gofastr")
     pacman::p_load(tm, topicmodels, dplyr, tidyr, igraph, devtools, LDAvis, ggplot2)
 
@@ -352,7 +355,7 @@ The .R script for this demonstration can be downloaded from
     ))
 
     ## SHA-1 hash of file is 5ac52af21ce36dfe8f529b4fe77568ced9307cf0
-    ## SHA-1 hash of file is df83e0293c60b009fdb06ac89a84af891c13bcb6
+    ## SHA-1 hash of file is d640f379ce7e46c3be8245481053e359a8c1db60
 
     data(presidential_debates_2012)
 
@@ -375,33 +378,26 @@ The .R script for this demonstration can be downloaded from
 
 ### Control List
 
-    seed <- 100
-    burnin <- 1000
-    iter <- 1000
-    keep <- 50
-
-    control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
+    control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
 
 ### Determine Optimal Number of Topics
 
 The plot below shows the harmonic mean of the log likelihoods against k
 (number of topics).
 
-    k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
+    (k <- optimal_k(doc_term_mat, control = control))
 
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 30 iterations (Current: 01:49:17; Elapsed: .3 mins)
-    ## 20 of 30 iterations (Current: 01:50:05; Elapsed: 1 mins; Remaining: ~1.3 mins)
-    ## 30 of 30 iterations (Current: 01:51:21; Elapsed: 2.3 mins; Remaining: ~0 mins)
-    ## Optimal number of topics = 22
-
-    k
+    ## 10 of 30 iterations (Current: 02:45:47; Elapsed: .2 mins)
+    ## 20 of 30 iterations (Current: 02:46:26; Elapsed: .8 mins; Remaining: ~1.1 mins)
+    ## 30 of 30 iterations (Current: 02:47:25; Elapsed: 1.8 mins; Remaining: ~0 mins)
+    ## Optimal number of topics = 12
 
 ![](inst/figure/unnamed-chunk-6-1.png)
 
-It appears the optimal number of topics is ~k = 22.
+It appears the optimal number of topics is ~k = 12.
 
 ### Run the Model
 

@@ -189,12 +189,7 @@ doc_term_mat <- presidential_debates_2012 %>%
 ### Control List
 
 ```{r}
-seed <- 100
-burnin <- 1000
-iter <- 1000
-keep <- 50
-
-control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
+control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
 ```
 
 ### Determine Optimal Number of Topics
@@ -202,8 +197,7 @@ control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
 The plot below shows the harmonic mean of the log likelihoods against k (number of topics).  
 
 ```{r}
-k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
-k
+(k <- optimal_k(doc_term_mat, control = control))
 ```
 
 It appears the optimal number of topics is ~k = `r as.numeric(k)`.

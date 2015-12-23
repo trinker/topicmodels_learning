@@ -34,17 +34,10 @@ doc_term_mat <- presidential_debates_2012 %>%
 
 
 ## Control List
-seed <- 100
-burnin <- 1000
-iter <- 1000
-keep <- 50
-
-control <- list(seed = seed, burnin = burnin, iter = iter, keep = keep)
-
+control <- list(seed = 100, burnin = 500, iter = 1000, keep = 100)
 
 ## Determine Optimal Number of Topics
-k <- optimal_k(doc_term_mat, burnin = burnin, iter = iter, keep = keep)
-k
+(k <- optimal_k(doc_term_mat, control = control))
 
 
 ## Run the Model
