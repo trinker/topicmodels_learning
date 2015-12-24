@@ -69,8 +69,12 @@
 #' opti_k2
 optimal_k <- function(x, max.k = 30, harmonic.mean = TRUE, 
     control = if (harmonic.mean) list(burnin = 500, iter = 1000, keep = 100) else  NULL,
-    method = if (harmonic.mean) "Gibbs" else "VEM", verbose = TRUE, ...){
+    method = if (harmonic.mean) "Gibbs" else "VEM", verbose = TRUE, drop.seed = TRUE, ...){
 
+    if (isTRUE(drop.seed)){
+        control[["seed"]] <- NULL
+    }
+    
     if (isTRUE(harmonic.mean)) {
         optimal_k1(x, max.k = max.k, control = control, method = method, verbose = verbose, ...)
     } else {
