@@ -189,7 +189,7 @@ doc_term_mat <- presidential_debates_2012 %>%
 ### Control List
 
 ```{r}
-control <- list(burnin = 500, iter = 1000, keep = 100, seed = 2200)
+control <- list(burnin = 500, iter = 1000, keep = 100, seed = 2500)
 ```
 
 

@@ -352,7 +352,7 @@ The .R script for this demonstration can be downloaded from
     ))
 
     ## SHA-1 hash of file is 5ac52af21ce36dfe8f529b4fe77568ced9307cf0
-    ## SHA-1 hash of file is fe572398ce9960d23c2870d854a3a89242cfcb50
+    ## SHA-1 hash of file is 7f0ab64a94948c8b60ba29dddf799e3f6c423435
 
     data(presidential_debates_2012)
 
@@ -375,7 +375,7 @@ The .R script for this demonstration can be downloaded from
 
 ### Control List
 
-    control <- list(burnin = 500, iter = 1000, keep = 100, seed = 2200)
+    control <- list(burnin = 500, iter = 1000, keep = 100, seed = 2500)
 
 ### Determine Optimal Number of Topics
 
@@ -387,15 +387,15 @@ The plot below shows the harmonic mean of the log likelihoods against k
     ## 
     ## Grab a cup of coffee this could take a while...
 
-    ## 10 of 40 iterations (Current: 08:33:04; Elapsed: .2 mins)
-    ## 20 of 40 iterations (Current: 08:33:43; Elapsed: .8 mins; Remaining: ~2.6 mins)
-    ## 30 of 40 iterations (Current: 08:34:45; Elapsed: 1.9 mins; Remaining: ~1.5 mins)
-    ## 40 of 40 iterations (Current: 08:36:11; Elapsed: 3.3 mins; Remaining: ~0 mins)
-    ## Optimal number of topics = 15
+    ## 10 of 40 iterations (Current: 08:54:32; Elapsed: .2 mins)
+    ## 20 of 40 iterations (Current: 08:55:07; Elapsed: .8 mins; Remaining: ~2.3 mins)
+    ## 30 of 40 iterations (Current: 08:56:03; Elapsed: 1.7 mins; Remaining: ~1.3 mins)
+    ## 40 of 40 iterations (Current: 08:57:30; Elapsed: 3.2 mins; Remaining: ~0 mins)
+    ## Optimal number of topics = 20
 
 ![](inst/figure/unnamed-chunk-7-1.png)
 
-It appears the optimal number of topics is ~k = 15.
+It appears the optimal number of topics is ~k = 20.
 
 ### Run the Model
 
