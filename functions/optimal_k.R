@@ -19,6 +19,8 @@
 #' log likelihood is saved every keep iterations.
 #' @param method The method to be used for fitting; currently 
 #' \code{method = "VEM"} or \code{method= "Gibbs"} are supported.
+#' @param drop.seed Logical.  If \code{TRUE} \code{seed} argument is dropped from
+#' \code{control}.
 #' @param \ldots Other arguments passed to \code{??LDAcontrol}.
 #' @return Returns the \code{\link[base]{data.frame}} of k (nuber of topics) and 
 #' the associated log likelihood.
