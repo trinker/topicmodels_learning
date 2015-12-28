@@ -35,7 +35,7 @@ This is my run down of the minimal readings, websites, videos, & scripts the rea
 7. Marwick, B. (2014a). [The input parameters for using latent Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
 8. Tang, J., Meng, Z., Nguyen, X. , Mei, Q. , & Zhang, M. (2014). [Understanding the limiting factors of topic modeling via posterior contraction analysis](/articles/Tang2014.pdf). In *31 st International Conference on Machine Learning*, 190-198.
 9. Sievert, C. (2014). [LDAvis: A method for visualizing and interpreting topic models](https://www.youtube.com/watch?v=IksL96ls4o0)
-10. Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting Topics in Lda Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
+10. Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting Topics in LDA Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
 11. Rinker, T.W. (2015). [R Script: Example Topic Model Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
 # Key Players
@@ -96,7 +96,7 @@ Academy of Sciences of the United States of America, 101, 5228-5235.
 - Jones, T. (n.d.). [Topic Models Reading List](http://www.biasedestimates.com/p/topic-models-reading-list.html)
 - Marwick, B. (2014a). [The input parameters for using latent Dirichlet allocation](http://stats.stackexchange.com/a/25128/7482)
 - Marwick, B. (2014b). [Topic models: cross validation with loglikelihood or perplexity](http://stackoverflow.com/a/21394092/1000343)
-- Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting Topics in Lda Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
+- Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting Topics in LDA Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
 - Schmidt, B.M. (2012). [Words Alone: Dismantling Topic Models in the Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 - Underwood, T. (2012a). [Topic Modeling Made Just Simple  Enough](http://tedunderwood.com/2012/04/07/topic-modeling-made-just-simple-enough/)
 - Underwood, T. (2012b). [What kinds of "topics" does topic modeling actually produce?](http://tedunderwood.com/2012/04/01/what-kinds-of-topics-does-topic-modeling-actually-produce/)

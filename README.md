@@ -69,7 +69,7 @@ useful.
 9.  Sievert, C. (2014). [LDAvis: A method for visualizing and
     interpreting topic
     models](https://www.youtube.com/watch?v=IksL96ls4o0)
-10. Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting Topics in Lda Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
+10. Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting Topics in LDA Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
 11. Rinker, T.W. (2015). [R Script: Example Topic Model
     Analysis](https://raw.githubusercontent.com/trinker/topicmodels_learning/master/scripts/Example_topic_model_analysis.R)
 
@@ -212,7 +212,7 @@ Websites & Blogs
     loglikelihood or
     perplexity](http://stackoverflow.com/a/21394092/1000343)
 -   Rhody, L. M. (2012). [Some Assembly Required: Understanding and Interpreting 
-    Topics in Lda Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
+    Topics in LDA Models of Figurative Language](http://www.lisarhody.com/some-assembly-required)
 -   Schmidt, B.M. (2012). [Words Alone: Dismantling Topic Models in the
     Humanities](http://journalofdigitalhumanities.org/2-1/words-alone-by-benjamin-m-schmidt/)
 -   Underwood, T. (2012a). [Topic Modeling Made Just Simple
