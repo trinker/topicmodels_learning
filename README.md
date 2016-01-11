@@ -123,6 +123,9 @@ Articles
 Applied
 -------
 
+Marwick, B. 2013. [Discovery of Emergent Issues and Controversies in Anthropology Using Text Mining, Topic Modeling, and Social Network Analysis of Microblog Content](https://www.academia.edu/5508141/Discovery_of_Emergent_Issues_and_Controversies_in_Anthropology_Using_Text_Mining_Topic_Modeling_and_Social_Network_Analysis_of_Microblog_Content). In Yanchang Zhao, Yonghua Cen (eds) Data Mining Applications with R. Elsevier. p. 63-93
+
+
 Newman, D.J. & Block, S. (2006). [Probabilistic topic decomposition of
 an eighteenth-century American newspaper](/articles/Newman2006.pdf).
 *Journal of the American Society for Information Science and Technology.
