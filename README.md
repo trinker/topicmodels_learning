@@ -1,4 +1,4 @@
-Topic Models Learning and R Resources
+Topic Models Learning and R Resources [![Follow](https://img.shields.io/twitter/follow/tylerrinker.svg?style=social)](https://twitter.com/intent/follow?screen_name=tylerrinker)
 ============
 
 
