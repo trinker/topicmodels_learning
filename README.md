@@ -331,7 +331,8 @@ Example Modeling
 -   Medina, L. (2015). [Conspiracy Theories - Topic Modeling & Keyword
     Extraction](http://voidpatterns.org/2015/03/conspiracy-theories-topic-modeling-keyword-extraction/)
 -   Sievert, C. (n.d.). [A topic model for movie
-    reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)
+    reviews](http://cpsievert.github.io/LDAvis/reviews/reviews.html)     
+-   Sievert, C. (2014). [Topic Modeling In R](https://ropensci.org/blog/2014/04/16/topic-modeling-in-R/)
 
 Topic Modeling R Demo
 =====================
